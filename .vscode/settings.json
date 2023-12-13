@@ -20,6 +20,17 @@
     },
     "peacock.color": "#215732",
     "files.associations": {
-        "cstddef": "cpp"
+        "cstddef": "cpp",
+        "nokia5110lcd.h": "c",
+        "math.h": "c",
+        "main.h": "c",
+        "stm32f1xx_hal.h": "c",
+        "STM32F1XX_HAL.H": "cpp",
+        "xlocale": "c",
+        "xlocinfo": "c",
+        "stdint.h": "c",
+        "str2bitmap.h": "c",
+        "button.h": "c",
+        "calculatorgp.h": "c"
     }
 }

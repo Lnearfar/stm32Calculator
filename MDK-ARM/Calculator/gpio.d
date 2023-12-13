@@ -27,6 +27,16 @@ calculator\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 calculator\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 calculator\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 calculator\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
+calculator\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+calculator\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+calculator\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 calculator\gpio.o: ../Core/Inc/Nokia5110LCD.h
+calculator\gpio.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+calculator\gpio.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+calculator\gpio.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
 calculator\gpio.o: ../Core/Inc/spi.h
 calculator\gpio.o: ../Core/Inc/main.h
+calculator\gpio.o: ../Core/Inc/calculatorGP.h
+calculator\gpio.o: ../Core/Inc/button.h
+calculator\gpio.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+calculator\gpio.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

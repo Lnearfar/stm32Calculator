@@ -33,6 +33,8 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include"Nokia5110LCD.h"
+#include"calculatorGP.h"
+#include "button.h"
 
 /* USER CODE END Includes */
 

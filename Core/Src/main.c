@@ -20,6 +20,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "spi.h"
+#include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -55,7 +57,6 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
 /* USER CODE END 0 */
 
 /**
@@ -87,8 +88,15 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SPI2_Init();
+  MX_USART1_UART_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   lcdBegin();
+  InitCalculatorGP();
+  openingVideo();
+  // lcdFunTime();
+  HAL_UART_Receive_IT(&huart1,&buttonPressedType,1);
+  HAL_TIM_Base_Start_IT(&htim2);
 
   /* USER CODE END 2 */
 
@@ -99,7 +107,19 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+		
+    //�???要测按钮状�?�的函数，修改buttonPressedType变量值（变量定义在button.h文件)
+    // buttonPressedType = checkButton();
+
+    if(buttonPressedType!=BUT_NO_PRESS){
+      updateButtonState(buttonPressedType);
+      updateEquationString();
+      buttonPressedType=BUT_NO_PRESS;
+    }
+    updateCalDisplayMap();
+    //将DisplayMap显示出来
     updateDisplay();
+    //HAL_UART_Transmit(&huart1,&buttonPressedType,1,10);
   }
   /* USER CODE END 3 */
 }
@@ -143,6 +163,26 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+  if(huart==&huart1){
+    HAL_UART_Receive_IT(&huart1,&buttonPressedType,1);
+    HAL_UART_Transmit(&huart1,&buttonPressedType,1,10);
+  }
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+  if(htim==&htim2){
+    if(calData.cursorState==CURSOR_ST_0){
+      calData.cursorState=CURSOR_ST_1;
+    }
+    else if(calData.cursorState==CURSOR_ST_1){
+      calData.cursorState=CURSOR_ST_0;
+    }
+    else {
+      //do nothing calData.cursorState == CURSOR_ST_NOTSHOW
+    }
+  }
+}
 
 /* USER CODE END 4 */
 

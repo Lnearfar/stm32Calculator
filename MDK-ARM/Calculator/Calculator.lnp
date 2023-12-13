@@ -1,9 +1,14 @@
 --cpu Cortex-M3
 "calculator\startup_stm32f103xb.o"
 "calculator\nokia5110lcd.o"
+"calculator\nokia5110lcdbitfig.o"
+"calculator\calculatorgp.o"
+"calculator\button.o"
 "calculator\main.o"
 "calculator\gpio.o"
 "calculator\spi.o"
+"calculator\tim.o"
+"calculator\usart.o"
 "calculator\stm32f1xx_it.o"
 "calculator\stm32f1xx_hal_msp.o"
 "calculator\stm32f1xx_hal_gpio_ex.o"
@@ -20,6 +25,7 @@
 "calculator\stm32f1xx_hal_exti.o"
 "calculator\stm32f1xx_hal_tim.o"
 "calculator\stm32f1xx_hal_tim_ex.o"
+"calculator\stm32f1xx_hal_uart.o"
 "calculator\system_stm32f1xx.o"
 --strict --scatter "Calculator\Calculator.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

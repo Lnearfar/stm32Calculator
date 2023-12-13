@@ -3,16 +3,16 @@
         {
             "name": "Calculator",
             "includePath": [
-                "d:\\2023_Chips\\Calculator\\Calculator\\Core\\Inc",
-                "d:\\2023_Chips\\Calculator\\Calculator\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "d:\\2023_Chips\\Calculator\\Calculator\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "d:\\2023_Chips\\Calculator\\Calculator\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "d:\\2023_Chips\\Calculator\\Calculator\\Drivers\\CMSIS\\Include",
+                "${workspaceFolder}\\Core\\Inc",
+                "${workspaceFolder}\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "${workspaceFolder}\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "${workspaceFolder}\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "${workspaceFolder}\\Drivers\\CMSIS\\Include",
                 "E:\\Keil_v5\\ARM\\ARMCC\\include",
                 "E:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
-                "d:\\2023_Chips\\Calculator\\Calculator\\MDK-ARM",
-                "d:\\2023_Chips\\Calculator\\Calculator\\Core\\Src",
-                "d:\\2023_Chips\\Calculator\\Calculator\\Drivers\\STM32F1xx_HAL_Driver\\Src"
+                "${workspaceFolder}\\MDK-ARM",
+                "${workspaceFolder}\\Core\\Src",
+                "${workspaceFolder}\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

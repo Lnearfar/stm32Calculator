@@ -26,6 +26,16 @@ calculator\stm32f1xx_hal_msp.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ha
 calculator\stm32f1xx_hal_msp.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 calculator\stm32f1xx_hal_msp.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 calculator\stm32f1xx_hal_msp.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
+calculator\stm32f1xx_hal_msp.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+calculator\stm32f1xx_hal_msp.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+calculator\stm32f1xx_hal_msp.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 calculator\stm32f1xx_hal_msp.o: ../Core/Inc/Nokia5110LCD.h
+calculator\stm32f1xx_hal_msp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+calculator\stm32f1xx_hal_msp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+calculator\stm32f1xx_hal_msp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
 calculator\stm32f1xx_hal_msp.o: ../Core/Inc/spi.h
 calculator\stm32f1xx_hal_msp.o: ../Core/Inc/main.h
+calculator\stm32f1xx_hal_msp.o: ../Core/Inc/calculatorGP.h
+calculator\stm32f1xx_hal_msp.o: ../Core/Inc/button.h
+calculator\stm32f1xx_hal_msp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+calculator\stm32f1xx_hal_msp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

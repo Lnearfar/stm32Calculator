@@ -1,6 +1,9 @@
 calculator\nokia5110lcd.o: ..\Core\Src\Nokia5110LCD.c
 calculator\nokia5110lcd.o: ../Core/Inc/Nokia5110LCD.h
 calculator\nokia5110lcd.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+calculator\nokia5110lcd.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+calculator\nokia5110lcd.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+calculator\nokia5110lcd.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
 calculator\nokia5110lcd.o: ../Core/Inc/spi.h
 calculator\nokia5110lcd.o: ../Core/Inc/main.h
 calculator\nokia5110lcd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
@@ -28,4 +31,11 @@ calculator\nokia5110lcd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_fla
 calculator\nokia5110lcd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 calculator\nokia5110lcd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 calculator\nokia5110lcd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
+calculator\nokia5110lcd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+calculator\nokia5110lcd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+calculator\nokia5110lcd.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 calculator\nokia5110lcd.o: ../Core/Inc/Nokia5110LCD.h
+calculator\nokia5110lcd.o: ../Core/Inc/calculatorGP.h
+calculator\nokia5110lcd.o: ../Core/Inc/button.h
+calculator\nokia5110lcd.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+calculator\nokia5110lcd.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

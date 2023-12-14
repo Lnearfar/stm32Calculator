@@ -31,6 +31,8 @@ typedef struct{
     uint8_t cursorState;//光标的状态
     //button
     uint8_t buttonType;
+    //与上位机通信相关的内容
+    uint8_t ctrSignal;
 }Struct_Data_Buffer;
 
 extern Struct_Data_Buffer calData;

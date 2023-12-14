@@ -4,7 +4,7 @@
 #include "stdint.h"
 #include "stm32f1xx_hal.h"
 
-//按键变量宏定义
+//按键变量宏定义,请勿随便改变顺序！可以在后方添加相应的按键功能,但不要在中间加入新的定义!
 typedef enum
 {
     BUT_NO_PRESS=0,
@@ -24,6 +24,7 @@ typedef enum
     BUT_MINUS,
     BUT_MUL,
     BUT_DIV,
+
     BUT_LBR,//left bracket(左括号)
     BUT_RBR,//left bracket(左括号)
     BUT_DOT,

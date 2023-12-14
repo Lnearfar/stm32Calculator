@@ -1,33 +1,40 @@
-# STM32Calculator
-这是北理2021级自动化大三上学期的单片机课设项目计算器。
-## 项目介绍[Introduction]
-本项目为一台简易的计算器，能够键盘输入，LCD显示屏输出，并实现了一些的运算符如
-* $+$,$-$,$*$,$/$
-* ^(乘方）
-* $\sqrt[n]{m}(n=2,3)$
+# STM32 Calculator with Nokia5110LCD & Qt Interface
 
-**硬件介绍**
-主控芯片采用stm32f103c8t6；显示屏为Nokia 5110 LCD，分辨率为84*48；输入为4*4矩阵键盘；stm32通过SPI发送图像信息给LCD显示屏，通过UART与上位机进行通信。
-硬件连线图如下：
-**软件介绍**
-上位机采用（），
-**优点**
-1. 充分考虑到硬件与软件的交互，硬件或软件的输入均会实时的修改显示值。
-2. ...
+## Description
+This project implements calculator functionalities based on the STM32 microcontroller. The display screen utilized is the Nokia5110LCD, while the upper computer (host) adopts the Qt software architecture. Communication between the upper computer and STM32 is achieved via UART. The project aims to demonstrate how to utilize STM32 to implement calculator functionalities and establish communication and control with a specific display screen and upper computer software.
+该项目为北理特立自动化大三上单片机课设选题之一。
+项目基于STM32微控制器实现了计算器功能。显示屏采用Nokia5110LCD，上位机采用Qt软件架构。上位机与STM32之间通过UART通信。本项目旨在展示如何利用STM32实现计算器功能，并结合特定显示屏和上位机软件进行通信与控制。
 
-## 使用方法
-本项目基于STM32CUBEMX，建立Keil工程。
-Keil工程目录位于MDK-ARM/Calculator/Calculator.uvprojx
-编译后，通过STLINK-V2即可烧录hex文件至stm32f103c8t6.
+## Key Features
+- **STM32 Implementation**: Implementing basic calculator functionalities on STM32.
+- **Nokia5110LCD**: Utilizing Nokia5110LCD display for information presentation.
+- **Qt Upper Computer**: Employing Qt software as the upper computer control interface.
 
-### 按键介绍
-本实验
+## Installation
+To use this project, follow these steps:
 
-## 演示
+Clone the repository: `git clone https://github.com/Lnearfar/stm32Calculator.git`
 
-**欢迎阅读本项目源码并提出您宝贵的意见**
+
+## Usage
+Once installed, follow these instructions to use the project:
+
+1. Refer to the diagram for **hardware connections**.
+2. For the **stm32** section: Open the Keil project at MDK-ARM/Calculator/Calculator.uvprojx, compile, and flash it onto the stm32f103c8.
+3. For the **Host** section(上位机): Open the Qt project at Host/stm32CalculatorHost/stm32CalculatorHost.pro.
+
+## Contribution
+We welcome contributions from the community! To contribute to the project, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/awesome-feature`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add awesome feature'`).
+5. Push to the branch (`git push origin feature/awesome-feature`).
+6. Create a Pull Request.
 
 ## License
 MIT
 
-
+## Contact
+For any inquiries or support regarding the project, feel free to contact us at [nearfar1jy@gmail.com].

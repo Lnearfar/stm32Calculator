@@ -12,11 +12,13 @@ SOURCES += \
     button.cpp \
     main.cpp \
     mainwindow.cpp \
+    serialFrame.cpp \
     settingsdialog.cpp
 
 HEADERS += \
     button.h \
     mainwindow.h \
+    serialFrame.h \
     settingsdialog.h
 
 FORMS += \

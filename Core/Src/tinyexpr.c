@@ -201,6 +201,7 @@ static double divide(double a, double b) { return a / b; }
 static double negate(double a) { return -a; }
 static double comma(double a, double b) { (void)a; return b; }
 
+//å­—ç¬¦ä¸²æ›¿æ¢å‡½æ•°ï¼Œå°†ç‰¹æ®Šç¬¦å·æ›¿æ¢æˆæŒ‡å®šå­—ç¬¦ä¸²
 void replace_str(char* str, const char* old_str, const char* new_str)
 {
     int old_len = strlen(old_str);
@@ -209,9 +210,9 @@ void replace_str(char* str, const char* old_str, const char* new_str)
 
     while ((pos = strstr(pos, old_str)) != NULL)
     {
-        //½«Ô´×Ö·û´®ÖĞ×Ó´®ºóÃæµÄËùÓĞ×Ö·ûÍùºóÒÆ¶¯
+        //å°†æºå­—ç¬¦ä¸²ä¸­å­ä¸²åé¢çš„æ‰€æœ‰å­—ç¬¦å¾€åç§»åŠ¨
         memmove(pos + new_len, pos + old_len, strlen(pos + old_len) + 1);
-        //½«ĞÂµÄ×Ö·û´®²åÈëµ½×Ó´®µÄÎ»ÖÃÉÏ
+        //å°†æ–°çš„å­—ç¬¦ä¸²æ’å…¥åˆ°å­ä¸²çš„ä½ç½®ä¸Š
         memcpy(pos, new_str, new_len);
         pos += new_len;
 

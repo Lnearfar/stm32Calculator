@@ -34,7 +34,6 @@
  *
  */
 #include "calculatorGP.h"
-#include "tinyexpr.h"
 /* Private vairable and definition start*/
 
 // 包含equation,answer,cursor,button

@@ -34,7 +34,6 @@
  *
  */
 #include "calculatorGP.h"
-
 /* Private vairable and definition start*/
 
 // 包含equation,answer,cursor,button
@@ -133,10 +132,10 @@ char but2char(uint8_t button_type)
         return '^';
         break;
     case BUT_CUBE:
-        return '3';
+        return '#';
         break;
     case BUT_CBRT:
-        return '3';
+        return '$';
         break;
     default:
         // 默认情况下返回一个特殊字符或者做其他处理
@@ -157,7 +156,20 @@ void updateEquationString(void)
     {
         // cal.answerNeedClear=true
         //  计算的程序,用tinyExpression库
-        //  要告知计算机保存数据()
+       /** 方根运算处理方法一  replace_str定义在了tinyexpr库中
+        *replace_str(calData.equationStr, "^", "^2"); //对特殊的四个运算进行符号替换
+        *replace_str(calData.equationStr, "@", "^(1/2)");
+        *replace_str(calData.equationStr, "#", "^3");
+        *replace_str(calData.equationStr, "$", "^(1/3)");
+        */
+        calData.answer= te_interp(calData.equationStr, 0);
+        calData.answer = ((float)((int)((calData.answer + 0.005) * 100))) / 100; //把运算结果保留小数点后两位
+        memset(calData.answerStr, 0, sizeof(calData.answerStr));
+        sprintf(calData.answerStr, "%.2f", calData.answer);
+        calData.answerStrLength = sizeof(calData.answerStr);
+        calData.answerNeedClear = true; 
+        calData.calculationTimes++; //  要告知计算机保存数据
+
     }
     break;
     case BUT_CLEAR:
@@ -354,6 +366,255 @@ void updateEquationString(void)
             // calData.cursorScreenX;
         }
     }
+        
+    //方根运算处理方法二 下面是当按键为squ sqrt cube cbrt时插入相应的多位字符
+   /**
+         //开根号运算
+         case BUT_SQRT:
+    {
+        //在cursorInEqString处插入字符sqrt(,然后光标后移
+        char str[] = "^(1/2)";
+        calData.buttonType = BUT_NO_PRESS;
+        // 如果光标在屏幕中间，向后移动一位
+        for (int j = 0; j < 6; j++)
+        {
+            if (calData.cursorScreenX != LCD_WIDTH - 1)
+            {
+                for (int i = calData.equationStrLength; i > calData.cursorInEqString; i--)
+                {
+                    calData.equationStr[i] = calData.equationStr[i - 1];
+                }
+                calData.equationStr[calData.cursorInEqString] = str[j];
+                // 下面是对各个变量的修改
+                //  calData.equation
+                // calData.eqEDptr
+                if (calData.eqEDptr == calData.equationStrLength)
+                {
+                    calData.eqEDptr++;
+                }
+                calData.equationStrLength++;
+                // calData.eqSTptr
+
+                if (calData.answerNeedClear)
+                {
+                    calData.answer = 0;
+                    memset(calData.answerStr, '\0', sizeof(calData.answerStr));
+                    calData.answerStrLength = 0;
+                    calData.answerNeedClear = false;
+                }
+                calData.cursorInEqString++;
+                calData.cursorScreenX += (calData.cursorScreenX == 0) ? 5 : 6;
+            }
+            // 光标在屏幕最右端
+            else
+            {
+                for (int i = calData.equationStrLength; i > calData.cursorInEqString; i--)
+                {
+                    calData.equationStr[i] = calData.equationStr[i - 1];
+                }
+                calData.equationStr[calData.cursorInEqString] = str[j];
+                // 下面是对各个变量的修改
+                //  calData.equation
+                calData.equationStrLength++;
+                calData.eqSTptr++;
+                calData.eqEDptr++;
+                if (calData.answerNeedClear)
+                {
+                    calData.answer = 0;
+                    memset(calData.answerStr, '\0', sizeof(calData.answerStr));
+                    calData.answerStrLength = 0;
+                    calData.answerNeedClear = false;
+                }
+                calData.cursorInEqString++;
+                // calData.cursorScreenX;
+            }
+        }
+    }   
+        //平方运算
+         case BUT_SQU:
+    {
+        //在cursorInEqString处插入字符sqrt(,然后光标后移
+        char str[] = " ^2";
+        calData.buttonType = BUT_NO_PRESS;
+        // 如果光标在屏幕中间，向后移动一位
+        for (int j = 0; j < 2; j++)
+        {
+            if (calData.cursorScreenX != LCD_WIDTH - 1)
+            {
+                for (int i = calData.equationStrLength; i > calData.cursorInEqString; i--)
+                {
+                    calData.equationStr[i] = calData.equationStr[i - 1];
+                }
+                calData.equationStr[calData.cursorInEqString] = str[j];
+                // 下面是对各个变量的修改
+                //  calData.equation
+                // calData.eqEDptr
+                if (calData.eqEDptr == calData.equationStrLength)
+                {
+                    calData.eqEDptr++;
+                }
+                calData.equationStrLength++;
+                // calData.eqSTptr
+
+                if (calData.answerNeedClear)
+                {
+                    calData.answer = 0;
+                    memset(calData.answerStr, '\0', sizeof(calData.answerStr));
+                    calData.answerStrLength = 0;
+                    calData.answerNeedClear = false;
+                }
+                calData.cursorInEqString++;
+                calData.cursorScreenX += (calData.cursorScreenX == 0) ? 5 : 6;
+            }
+            // 光标在屏幕最右端
+            else
+            {
+                for (int i = calData.equationStrLength; i > calData.cursorInEqString; i--)
+                {
+                    calData.equationStr[i] = calData.equationStr[i - 1];
+                }
+                calData.equationStr[calData.cursorInEqString] = str[j];
+                // 下面是对各个变量的修改
+                //  calData.equation
+                calData.equationStrLength++;
+                calData.eqSTptr++;
+                calData.eqEDptr++;
+                if (calData.answerNeedClear)
+                {
+                    calData.answer = 0;
+                    memset(calData.answerStr, '\0', sizeof(calData.answerStr));
+                    calData.answerStrLength = 0;
+                    calData.answerNeedClear = false;
+                }
+                calData.cursorInEqString++;
+                // calData.cursorScreenX;
+            }
+        }
+    }   
+        //立方运算
+        case BUT_CUBE:
+    {
+        //在cursorInEqString处插入字符cbrt(,然后光标后移
+        char str[] = "^3";
+        calData.buttonType = BUT_NO_PRESS;
+        // 如果光标在屏幕中间，向后移动一位
+        for (int j = 0; j < 2; j++)
+        {
+            if (calData.cursorScreenX != LCD_WIDTH - 1)
+            {
+                for (int i = calData.equationStrLength; i > calData.cursorInEqString; i--)
+                {
+                    calData.equationStr[i] = calData.equationStr[i - 1];
+                }
+                calData.equationStr[calData.cursorInEqString] = str[j];
+                // 下面是对各个变量的修改
+                //  calData.equation
+                // calData.eqEDptr
+                if (calData.eqEDptr == calData.equationStrLength)
+                {
+                    calData.eqEDptr++;
+                }
+                calData.equationStrLength++;
+                // calData.eqSTptr
+
+                if (calData.answerNeedClear)
+                {
+                    calData.answer = 0;
+                    memset(calData.answerStr, '\0', sizeof(calData.answerStr));
+                    calData.answerStrLength = 0;
+                    calData.answerNeedClear = false;
+                }
+                calData.cursorInEqString++;
+                calData.cursorScreenX += (calData.cursorScreenX == 0) ? 5 : 6;
+            }
+            // 光标在屏幕最右端
+            else
+            {
+                for (int i = calData.equationStrLength; i > calData.cursorInEqString; i--)
+                {
+                    calData.equationStr[i] = calData.equationStr[i - 1];
+                }
+                calData.equationStr[calData.cursorInEqString] = str[j];
+                // 下面是对各个变量的修改
+                //  calData.equation
+                calData.equationStrLength++;
+                calData.eqSTptr++;
+                calData.eqEDptr++;
+                if (calData.answerNeedClear)
+                {
+                    calData.answer = 0;
+                    memset(calData.answerStr, '\0', sizeof(calData.answerStr));
+                    calData.answerStrLength = 0;
+                    calData.answerNeedClear = false;
+                }
+                calData.cursorInEqString++;
+                // calData.cursorScreenX;
+            }
+        }
+    }
+
+        //立方根运算
+        case BUT_CBRT:
+    {
+        //在cursorInEqString处插入字符cbrt(,然后光标后移
+        char str[] = " ^(1/3)";
+        calData.buttonType = BUT_NO_PRESS;
+        // 如果光标在屏幕中间，向后移动一位
+        for (int j = 0; j < 6; j++)
+        {
+            if (calData.cursorScreenX != LCD_WIDTH - 1)
+            {
+                for (int i = calData.equationStrLength; i > calData.cursorInEqString; i--)
+                {
+                    calData.equationStr[i] = calData.equationStr[i - 1];
+                }
+                calData.equationStr[calData.cursorInEqString] = str[j];
+                // 下面是对各个变量的修改
+                //  calData.equation
+                // calData.eqEDptr
+                if (calData.eqEDptr == calData.equationStrLength)
+                {
+                    calData.eqEDptr++;
+                }
+                calData.equationStrLength++;
+                // calData.eqSTptr
+
+                if (calData.answerNeedClear)
+                {
+                    calData.answer = 0;
+                    memset(calData.answerStr, '\0', sizeof(calData.answerStr));
+                    calData.answerStrLength = 0;
+                    calData.answerNeedClear = false;
+                }
+                calData.cursorInEqString++;
+                calData.cursorScreenX += (calData.cursorScreenX == 0) ? 5 : 6;
+            }
+            // 光标在屏幕最右端
+            else
+            {
+                for (int i = calData.equationStrLength; i > calData.cursorInEqString; i--)
+                {
+                    calData.equationStr[i] = calData.equationStr[i - 1];
+                }
+                calData.equationStr[calData.cursorInEqString] = str[j];
+                // 下面是对各个变量的修改
+                //  calData.equation
+                calData.equationStrLength++;
+                calData.eqSTptr++;
+                calData.eqEDptr++;
+                if (calData.answerNeedClear)
+                {
+                    calData.answer = 0;
+                    memset(calData.answerStr, '\0', sizeof(calData.answerStr));
+                    calData.answerStrLength = 0;
+                    calData.answerNeedClear = false;
+                }
+                calData.cursorInEqString++;
+                // calData.cursorScreenX;
+            }
+        }
+    }
+    */
     break;
     default:
         break;

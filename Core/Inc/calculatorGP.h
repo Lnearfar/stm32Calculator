@@ -3,6 +3,7 @@
 
 #include "Nokia5110LCD.h"
 #include "button.h"
+#include "tinyexpr.h"
 #include <stdbool.h>
 #include <string.h>
 

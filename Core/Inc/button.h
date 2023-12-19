@@ -3,6 +3,10 @@
 
 #include "stdint.h"
 #include "stm32f1xx_hal.h"
+#include "tim.h"
+#include "usart.h"
+#include "gpio.h"
+#include "string.h"            //宏定义
 
 //按键变量宏定义,请勿随便改变顺序！可以在后方添加相应的按键功能,但不要在中间加入新的定义!
 typedef enum
@@ -45,10 +49,14 @@ typedef enum
     BUT_VARIABLE_X,
     BUT_VARIABLE_Y,
     BUT_EQ_NL,//新的一行显示
+    BUT_POW,//^
+    BUT_SHIFT,
 }KEY_ENUM;
 
 extern uint8_t buttonPressedType;
+extern int m_but_state;
+extern int m_but_time;
 
-uint8_t checkButton();
+uint8_t checkButton(void);
 
 #endif

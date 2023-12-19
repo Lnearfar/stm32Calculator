@@ -37,5 +37,11 @@ calculator\nokia5110lcdbitfig.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_h
 calculator\nokia5110lcdbitfig.o: ../Core/Inc/Nokia5110LCD.h
 calculator\nokia5110lcdbitfig.o: ../Core/Inc/calculatorGP.h
 calculator\nokia5110lcdbitfig.o: ../Core/Inc/button.h
-calculator\nokia5110lcdbitfig.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+calculator\nokia5110lcdbitfig.o: ../Core/Inc/tim.h
+calculator\nokia5110lcdbitfig.o: ../Core/Inc/main.h
+calculator\nokia5110lcdbitfig.o: ../Core/Inc/usart.h
+calculator\nokia5110lcdbitfig.o: ../Core/Inc/gpio.h
 calculator\nokia5110lcdbitfig.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+calculator\nokia5110lcdbitfig.o: ../Core/Inc/tinyexpr.h
+calculator\nokia5110lcdbitfig.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+calculator\nokia5110lcdbitfig.o: ../Core/Inc/serialFrame.h

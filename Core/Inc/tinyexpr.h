@@ -7,6 +7,9 @@
 extern "C" {
 #endif
 
+#if defined ( __CC_ARM   )
+#pragma anon_unions
+#endif
 
 
     typedef struct te_expr {

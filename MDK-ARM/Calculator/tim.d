@@ -38,5 +38,10 @@ calculator\tim.o: ../Core/Inc/spi.h
 calculator\tim.o: ../Core/Inc/main.h
 calculator\tim.o: ../Core/Inc/calculatorGP.h
 calculator\tim.o: ../Core/Inc/button.h
-calculator\tim.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+calculator\tim.o: ../Core/Inc/tim.h
+calculator\tim.o: ../Core/Inc/usart.h
+calculator\tim.o: ../Core/Inc/gpio.h
 calculator\tim.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+calculator\tim.o: ../Core/Inc/tinyexpr.h
+calculator\tim.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+calculator\tim.o: ../Core/Inc/serialFrame.h

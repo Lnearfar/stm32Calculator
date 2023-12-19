@@ -661,6 +661,7 @@ void updateEquationString(void)
 // 根据calData里面的信息，更新bitmap
 void updateCalDisplayMap(void)
 {
+    clearDisplay(WHITE);
     setStrWithL(calData.equationStr + calData.eqSTptr, LCD_WIDTH / 6, 0, 9, BLACK);
     setStrWithL(calData.answerStr, calData.answerStrLength, 50, 39, BLACK);
     // 根据cursorState画线

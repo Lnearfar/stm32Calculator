@@ -11,6 +11,8 @@
 "calculator\usart.o"
 "calculator\stm32f1xx_it.o"
 "calculator\stm32f1xx_hal_msp.o"
+"calculator\serialframe.o"
+"calculator\tinyexpr.o"
 "calculator\stm32f1xx_hal_gpio_ex.o"
 "calculator\stm32f1xx_hal_spi.o"
 "calculator\stm32f1xx_hal.o"

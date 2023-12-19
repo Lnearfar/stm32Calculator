@@ -1,15 +1,15 @@
 Dependencies for Project 'Calculator', Target 'Calculator': (DO NOT MODIFY !)
-F (startup_stm32f103xb.s)(0x65799CFE)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 526" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o calculator\startup_stm32f103xb.o --depend calculator\startup_stm32f103xb.d)
+F (startup_stm32f103xb.s)(0x6581C27A)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 526" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o calculator\startup_stm32f103xb.o --depend calculator\startup_stm32f103xb.d)
 F (..\Core\Src\Nokia5110LCD.c)(0x65799618)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\nokia5110lcd.o --omf_browse calculator\nokia5110lcd.crf --depend calculator\nokia5110lcd.d)
 I (../Core/Inc/Nokia5110LCD.h)(0x657868AC)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\time.h)(0x599EDB3E)
-I (../Core/Inc/spi.h)(0x65799CF9)
-I (../Core/Inc/main.h)(0x65799CFA)
+I (../Core/Inc/spi.h)(0x6581C276)
+I (../Core/Inc/main.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -35,20 +35,25 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
-I (../Core/Inc/calculatorGP.h)(0x65799125)
-I (../Core/Inc/button.h)(0x657995DE)
-I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/calculatorGP.h)(0x6580443D)
+I (../Core/Inc/button.h)(0x6581C766)
+I (../Core/Inc/tim.h)(0x6581C277)
+I (../Core/Inc/usart.h)(0x6581C277)
+I (../Core/Inc/gpio.h)(0x6581C276)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/serialFrame.h)(0x658039E1)
 F (..\Core\Src\Nokia5110LCDbitFig.c)(0x6577FDAD)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\nokia5110lcdbitfig.o --omf_browse calculator\nokia5110lcdbitfig.crf --depend calculator\nokia5110lcdbitfig.d)
 I (../Core/Inc/Nokia5110LCD.h)(0x657868AC)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\time.h)(0x599EDB3E)
-I (../Core/Inc/spi.h)(0x65799CF9)
-I (../Core/Inc/main.h)(0x65799CFA)
+I (../Core/Inc/spi.h)(0x6581C276)
+I (../Core/Inc/main.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -74,21 +79,26 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
-I (../Core/Inc/calculatorGP.h)(0x65799125)
-I (../Core/Inc/button.h)(0x657995DE)
-I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/calculatorGP.h)(0x6580443D)
+I (../Core/Inc/button.h)(0x6581C766)
+I (../Core/Inc/tim.h)(0x6581C277)
+I (../Core/Inc/usart.h)(0x6581C277)
+I (../Core/Inc/gpio.h)(0x6581C276)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-F (..\Core\Src\calculatorGP.c)(0x6579A012)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\calculatorgp.o --omf_browse calculator\calculatorgp.crf --depend calculator\calculatorgp.d)
-I (../Core/Inc/calculatorGP.h)(0x65799125)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/serialFrame.h)(0x658039E1)
+F (..\Core\Src\calculatorGP.c)(0x6581D370)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\calculatorgp.o --omf_browse calculator\calculatorgp.crf --depend calculator\calculatorgp.d)
+I (../Core/Inc/calculatorGP.h)(0x6580443D)
 I (../Core/Inc/Nokia5110LCD.h)(0x657868AC)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\time.h)(0x599EDB3E)
-I (../Core/Inc/spi.h)(0x65799CF9)
-I (../Core/Inc/main.h)(0x65799CFA)
+I (../Core/Inc/spi.h)(0x6581C276)
+I (../Core/Inc/main.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -114,14 +124,19 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
-I (../Core/Inc/button.h)(0x657995DE)
-I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/button.h)(0x6581C766)
+I (../Core/Inc/tim.h)(0x6581C277)
+I (../Core/Inc/usart.h)(0x6581C277)
+I (../Core/Inc/gpio.h)(0x6581C276)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-F (..\Core\Src\button.c)(0x657995DC)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\button.o --omf_browse calculator\button.crf --depend calculator\button.d)
-I (../Core/Inc/button.h)(0x657995DE)
+I (../Core/Inc/serialFrame.h)(0x658039E1)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+F (..\Core\Src\button.c)(0x6581D1F5)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\button.o --omf_browse calculator\button.crf --depend calculator\button.d)
+I (../Core/Inc/button.h)(0x6581C766)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -147,53 +162,24 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
-F (../Core/Src/main.c)(0x6579A131)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\main.o --omf_browse calculator\main.crf --depend calculator\main.d)
-I (../Core/Inc/main.h)(0x65799CFA)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6567404D)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x65674044)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x65674044)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x65674044)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x65674044)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6567404D)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
+I (../Core/Inc/tim.h)(0x6581C277)
+I (../Core/Inc/main.h)(0x6581C277)
 I (../Core/Inc/Nokia5110LCD.h)(0x657868AC)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\time.h)(0x599EDB3E)
-I (../Core/Inc/spi.h)(0x65799CF9)
-I (../Core/Inc/calculatorGP.h)(0x65799125)
-I (../Core/Inc/button.h)(0x657995DE)
+I (../Core/Inc/spi.h)(0x6581C276)
+I (../Core/Inc/calculatorGP.h)(0x6580443D)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
 I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (../Core/Inc/tim.h)(0x65799CFA)
-I (../Core/Inc/usart.h)(0x65799CFA)
-I (../Core/Inc/gpio.h)(0x65799CF9)
-F (../Core/Src/gpio.c)(0x65799CF9)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\gpio.o --omf_browse calculator\gpio.crf --depend calculator\gpio.d)
-I (../Core/Inc/gpio.h)(0x65799CF9)
-I (../Core/Inc/main.h)(0x65799CFA)
+I (../Core/Inc/serialFrame.h)(0x658039E1)
+I (../Core/Inc/usart.h)(0x6581C277)
+I (../Core/Inc/gpio.h)(0x6581C276)
+F (../Core/Src/main.c)(0x6581D3E5)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\main.o --omf_browse calculator\main.crf --depend calculator\main.d)
+I (../Core/Inc/main.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -224,16 +210,21 @@ I (../Core/Inc/Nokia5110LCD.h)(0x657868AC)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\time.h)(0x599EDB3E)
-I (../Core/Inc/spi.h)(0x65799CF9)
-I (../Core/Inc/calculatorGP.h)(0x65799125)
-I (../Core/Inc/button.h)(0x657995DE)
-I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/spi.h)(0x6581C276)
+I (../Core/Inc/calculatorGP.h)(0x6580443D)
+I (../Core/Inc/button.h)(0x6581C766)
+I (../Core/Inc/tim.h)(0x6581C277)
+I (../Core/Inc/usart.h)(0x6581C277)
+I (../Core/Inc/gpio.h)(0x6581C276)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-F (../Core/Src/spi.c)(0x65799CF9)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\spi.o --omf_browse calculator\spi.crf --depend calculator\spi.d)
-I (../Core/Inc/spi.h)(0x65799CF9)
-I (../Core/Inc/main.h)(0x65799CFA)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/serialFrame.h)(0x658039E1)
+F (../Core/Src/gpio.c)(0x6581C276)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\gpio.o --omf_browse calculator\gpio.crf --depend calculator\gpio.d)
+I (../Core/Inc/gpio.h)(0x6581C276)
+I (../Core/Inc/main.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -264,15 +255,20 @@ I (../Core/Inc/Nokia5110LCD.h)(0x657868AC)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\time.h)(0x599EDB3E)
-I (../Core/Inc/calculatorGP.h)(0x65799125)
-I (../Core/Inc/button.h)(0x657995DE)
-I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/spi.h)(0x6581C276)
+I (../Core/Inc/calculatorGP.h)(0x6580443D)
+I (../Core/Inc/button.h)(0x6581C766)
+I (../Core/Inc/tim.h)(0x6581C277)
+I (../Core/Inc/usart.h)(0x6581C277)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-F (../Core/Src/tim.c)(0x65799CFA)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\tim.o --omf_browse calculator\tim.crf --depend calculator\tim.d)
-I (../Core/Inc/tim.h)(0x65799CFA)
-I (../Core/Inc/main.h)(0x65799CFA)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/serialFrame.h)(0x658039E1)
+F (../Core/Src/spi.c)(0x6581C276)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\spi.o --omf_browse calculator\spi.crf --depend calculator\spi.d)
+I (../Core/Inc/spi.h)(0x6581C276)
+I (../Core/Inc/main.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -303,16 +299,20 @@ I (../Core/Inc/Nokia5110LCD.h)(0x657868AC)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\time.h)(0x599EDB3E)
-I (../Core/Inc/spi.h)(0x65799CF9)
-I (../Core/Inc/calculatorGP.h)(0x65799125)
-I (../Core/Inc/button.h)(0x657995DE)
-I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/calculatorGP.h)(0x6580443D)
+I (../Core/Inc/button.h)(0x6581C766)
+I (../Core/Inc/tim.h)(0x6581C277)
+I (../Core/Inc/usart.h)(0x6581C277)
+I (../Core/Inc/gpio.h)(0x6581C276)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-F (../Core/Src/usart.c)(0x65799CFA)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\usart.o --omf_browse calculator\usart.crf --depend calculator\usart.d)
-I (../Core/Inc/usart.h)(0x65799CFA)
-I (../Core/Inc/main.h)(0x65799CFA)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/serialFrame.h)(0x658039E1)
+F (../Core/Src/tim.c)(0x6581C277)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\tim.o --omf_browse calculator\tim.crf --depend calculator\tim.d)
+I (../Core/Inc/tim.h)(0x6581C277)
+I (../Core/Inc/main.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -343,15 +343,20 @@ I (../Core/Inc/Nokia5110LCD.h)(0x657868AC)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\time.h)(0x599EDB3E)
-I (../Core/Inc/spi.h)(0x65799CF9)
-I (../Core/Inc/calculatorGP.h)(0x65799125)
-I (../Core/Inc/button.h)(0x657995DE)
-I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/spi.h)(0x6581C276)
+I (../Core/Inc/calculatorGP.h)(0x6580443D)
+I (../Core/Inc/button.h)(0x6581C766)
+I (../Core/Inc/usart.h)(0x6581C277)
+I (../Core/Inc/gpio.h)(0x6581C276)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-F (../Core/Src/stm32f1xx_it.c)(0x65799CFA)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_it.o --omf_browse calculator\stm32f1xx_it.crf --depend calculator\stm32f1xx_it.d)
-I (../Core/Inc/main.h)(0x65799CFA)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/serialFrame.h)(0x658039E1)
+F (../Core/Src/usart.c)(0x6581C277)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\usart.o --omf_browse calculator\usart.crf --depend calculator\usart.d)
+I (../Core/Inc/usart.h)(0x6581C277)
+I (../Core/Inc/main.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -382,16 +387,19 @@ I (../Core/Inc/Nokia5110LCD.h)(0x657868AC)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\time.h)(0x599EDB3E)
-I (../Core/Inc/spi.h)(0x65799CF9)
-I (../Core/Inc/calculatorGP.h)(0x65799125)
-I (../Core/Inc/button.h)(0x657995DE)
-I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/spi.h)(0x6581C276)
+I (../Core/Inc/calculatorGP.h)(0x6580443D)
+I (../Core/Inc/button.h)(0x6581C766)
+I (../Core/Inc/tim.h)(0x6581C277)
+I (../Core/Inc/gpio.h)(0x6581C276)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (../Core/Inc/stm32f1xx_it.h)(0x65799CFA)
-F (../Core/Src/stm32f1xx_hal_msp.c)(0x65799CFA)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_msp.o --omf_browse calculator\stm32f1xx_hal_msp.crf --depend calculator\stm32f1xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x65799CFA)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/serialFrame.h)(0x658039E1)
+F (../Core/Src/stm32f1xx_it.c)(0x6581C277)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_it.o --omf_browse calculator\stm32f1xx_it.crf --depend calculator\stm32f1xx_it.d)
+I (../Core/Inc/main.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -422,14 +430,116 @@ I (../Core/Inc/Nokia5110LCD.h)(0x657868AC)
 I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (E:\Keil_v5\ARM\ARMCC\include\time.h)(0x599EDB3E)
-I (../Core/Inc/spi.h)(0x65799CF9)
-I (../Core/Inc/calculatorGP.h)(0x65799125)
-I (../Core/Inc/button.h)(0x657995DE)
-I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/spi.h)(0x6581C276)
+I (../Core/Inc/calculatorGP.h)(0x6580443D)
+I (../Core/Inc/button.h)(0x6581C766)
+I (../Core/Inc/tim.h)(0x6581C277)
+I (../Core/Inc/usart.h)(0x6581C277)
+I (../Core/Inc/gpio.h)(0x6581C276)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/serialFrame.h)(0x658039E1)
+I (../Core/Inc/stm32f1xx_it.h)(0x6581C277)
+F (../Core/Src/stm32f1xx_hal_msp.c)(0x6581C277)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_msp.o --omf_browse calculator\stm32f1xx_hal_msp.crf --depend calculator\stm32f1xx_hal_msp.d)
+I (../Core/Inc/main.h)(0x6581C277)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6567404D)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x65674044)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x65674044)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x65674044)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x65674044)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6567404D)
+I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
+I (../Core/Inc/Nokia5110LCD.h)(0x657868AC)
+I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
+I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
+I (E:\Keil_v5\ARM\ARMCC\include\time.h)(0x599EDB3E)
+I (../Core/Inc/spi.h)(0x6581C276)
+I (../Core/Inc/calculatorGP.h)(0x6580443D)
+I (../Core/Inc/button.h)(0x6581C766)
+I (../Core/Inc/tim.h)(0x6581C277)
+I (../Core/Inc/usart.h)(0x6581C277)
+I (../Core/Inc/gpio.h)(0x6581C276)
+I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+I (../Core/Inc/serialFrame.h)(0x658039E1)
+F (..\Core\Src\serialFrame.c)(0x65803BE1)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\serialframe.o --omf_browse calculator\serialframe.crf --depend calculator\serialframe.d)
+I (../Core/Inc/serialFrame.h)(0x658039E1)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (../Core/Inc/usart.h)(0x6581C277)
+I (../Core/Inc/main.h)(0x6581C277)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6567404D)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x65674044)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x65674044)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x65674044)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x65674044)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6567404D)
+I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
+I (../Core/Inc/Nokia5110LCD.h)(0x657868AC)
+I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
+I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
+I (E:\Keil_v5\ARM\ARMCC\include\time.h)(0x599EDB3E)
+I (../Core/Inc/spi.h)(0x6581C276)
+I (../Core/Inc/calculatorGP.h)(0x6580443D)
+I (../Core/Inc/button.h)(0x6581C766)
+I (../Core/Inc/tim.h)(0x6581C277)
+I (../Core/Inc/gpio.h)(0x6581C276)
+I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
+F (..\Core\Src\tinyexpr.c)(0x6581C868)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\tinyexpr.o --omf_browse calculator\tinyexpr.crf --depend calculator\tinyexpr.d)
+I (../Core/Inc/tinyexpr.h)(0x6581C5D8)
+I (E:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x6576D6EF)
+I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x599EDB3E)
+I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
+I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (E:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x599EDB3E)
+I (E:\Keil_v5\ARM\ARMCC\include\limits.h)(0x599EDB3A)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_gpio_ex.o --omf_browse calculator\stm32f1xx_hal_gpio_ex.crf --depend calculator\stm32f1xx_hal_gpio_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -458,7 +568,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_spi.o --omf_browse calculator\stm32f1xx_hal_spi.crf --depend calculator\stm32f1xx_hal_spi.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -487,7 +597,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal.o --omf_browse calculator\stm32f1xx_hal.crf --depend calculator\stm32f1xx_hal.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -516,7 +626,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_rcc.o --omf_browse calculator\stm32f1xx_hal_rcc.crf --depend calculator\stm32f1xx_hal_rcc.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -545,7 +655,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_rcc_ex.o --omf_browse calculator\stm32f1xx_hal_rcc_ex.crf --depend calculator\stm32f1xx_hal_rcc_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -574,7 +684,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_gpio.o --omf_browse calculator\stm32f1xx_hal_gpio.crf --depend calculator\stm32f1xx_hal_gpio.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -603,7 +713,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_dma.o --omf_browse calculator\stm32f1xx_hal_dma.crf --depend calculator\stm32f1xx_hal_dma.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -632,7 +742,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_cortex.o --omf_browse calculator\stm32f1xx_hal_cortex.crf --depend calculator\stm32f1xx_hal_cortex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -661,7 +771,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_pwr.o --omf_browse calculator\stm32f1xx_hal_pwr.crf --depend calculator\stm32f1xx_hal_pwr.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -690,7 +800,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_flash.o --omf_browse calculator\stm32f1xx_hal_flash.crf --depend calculator\stm32f1xx_hal_flash.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -719,7 +829,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_flash_ex.o --omf_browse calculator\stm32f1xx_hal_flash_ex.crf --depend calculator\stm32f1xx_hal_flash_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -748,7 +858,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_exti.o --omf_browse calculator\stm32f1xx_hal_exti.crf --depend calculator\stm32f1xx_hal_exti.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -777,7 +887,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_tim.o --omf_browse calculator\stm32f1xx_hal_tim.crf --depend calculator\stm32f1xx_hal_tim.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -806,7 +916,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_tim_ex.o --omf_browse calculator\stm32f1xx_hal_tim_ex.crf --depend calculator\stm32f1xx_hal_tim_ex.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -835,7 +945,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6567404D)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c)(0x6567404D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_Calculator-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o calculator\stm32f1xx_hal_uart.o --omf_browse calculator\stm32f1xx_hal_uart.crf --depend calculator\stm32f1xx_hal_uart.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6567404D)
@@ -872,7 +982,7 @@ I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x65674044)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x65674044)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6567404D)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x65799CFA)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6581C277)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6567404D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6567404D)

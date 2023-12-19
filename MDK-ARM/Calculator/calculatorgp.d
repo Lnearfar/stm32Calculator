@@ -38,5 +38,11 @@ calculator\calculatorgp.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uar
 calculator\calculatorgp.o: ../Core/Inc/Nokia5110LCD.h
 calculator\calculatorgp.o: ../Core/Inc/calculatorGP.h
 calculator\calculatorgp.o: ../Core/Inc/button.h
-calculator\calculatorgp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+calculator\calculatorgp.o: ../Core/Inc/tim.h
+calculator\calculatorgp.o: ../Core/Inc/main.h
+calculator\calculatorgp.o: ../Core/Inc/usart.h
+calculator\calculatorgp.o: ../Core/Inc/gpio.h
 calculator\calculatorgp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+calculator\calculatorgp.o: ../Core/Inc/serialFrame.h
+calculator\calculatorgp.o: ../Core/Inc/tinyexpr.h
+calculator\calculatorgp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

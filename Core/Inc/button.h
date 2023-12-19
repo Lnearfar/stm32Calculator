@@ -44,10 +44,11 @@ typedef enum
     BUT_SOLVE,
     BUT_VARIABLE_X,
     BUT_VARIABLE_Y,
+    BUT_EQ_NL,//新的一行显示
 }KEY_ENUM;
 
 extern uint8_t buttonPressedType;
 
-char checkButton(void);
+uint8_t checkButton();
 
 #endif

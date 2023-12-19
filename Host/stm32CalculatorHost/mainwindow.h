@@ -8,6 +8,7 @@
 #include <QMessageBox>
 #include <QtWidgets>
 #include "button.h"
+#include "serialFrame.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -46,19 +47,22 @@ private slots:
 
     //按键功能 在mainwindow.cpp里面实现为，通过串口发送对应的操作码
     void digitClicked();
+    void operatorClicked();
+
+    //void additiveOperatorClicked();
+    //void multiplicativeOperatorClicked();
+    //void equalClicked();
+    //void pointClicked();
+
+    //void backspaceClicked();
+    //void clear();
+    /*void changeSignClicked();
     void unaryOperatorClicked();
-    void additiveOperatorClicked();
-    void multiplicativeOperatorClicked();
-    void equalClicked();
-    void pointClicked();
-    void changeSignClicked();
-    void backspaceClicked();
-    void clear();
     void clearAll();
     void clearMemory();
     void readMemory();
     void setMemory();
-    void addToMemory();
+    void addToMemory();*/
 
     void createKeyboardWidget();
 
@@ -77,7 +81,7 @@ private:
 
     QWidget *m_centralWidget;
     QWidget *m_keyboardWidget;
-    QLineEdit *m_displayWidget;
+    QTextEdit *m_displayWidget;
 
     //Button相关
     Button *createButton(const QString &text, const char *member);

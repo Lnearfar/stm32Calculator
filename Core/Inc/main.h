@@ -35,6 +35,7 @@ extern "C" {
 #include"Nokia5110LCD.h"
 #include"calculatorGP.h"
 #include "button.h"
+#include "serialFrame.h"
 
 /* USER CODE END Includes */
 

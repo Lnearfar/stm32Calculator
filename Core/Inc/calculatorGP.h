@@ -15,6 +15,9 @@ typedef enum
 }enum_cursor_state;
 
 typedef struct{
+    //数据帧定义
+    uint8_t frameStart1;
+    uint8_t frameStart2;
     //equation
     char equationStr[100];
     uint8_t equationStrLength;
@@ -34,6 +37,10 @@ typedef struct{
     uint8_t buttonType;
     //与上位机通信相关的内容
     uint8_t ctrSignal;
+
+    //数据帧尾部
+    uint8_t frameEnd1;
+    uint8_t frameEnd2;
 }Struct_Data_Buffer;
 
 extern Struct_Data_Buffer calData;
@@ -44,6 +51,7 @@ void updateButtonState(uint8_t button_type);
 void updateEquationString(void);
 void updateCalDisplayMap(void);
 void openingVideo(void);
+void insertCharToEqCursor(char c);
 
 #endif
 

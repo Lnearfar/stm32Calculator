@@ -93,6 +93,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   lcdBegin();
   InitCalculatorGP();
+  initHostButtonFrame();
   openingVideo();
   // lcdFunTime();
   HAL_UART_Receive_IT(&huart1,&buttonPressedType,1);
@@ -107,9 +108,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		
     //�???要测按钮状�?�的函数，修改buttonPressedType变量值（变量定义在button.h文件)
-    // buttonPressedType = checkButton();
+    buttonPressedType = checkButton();
 
     if(buttonPressedType!=BUT_NO_PRESS){
       updateButtonState(buttonPressedType);
@@ -120,6 +120,8 @@ int main(void)
     //将DisplayMap显示出来
     updateDisplay();
     //HAL_UART_Transmit(&huart1,&buttonPressedType,1,10);
+    //通过串口传给上位机Host
+    UART_Transmit_Struct(&huart1,&calData,sizeof(calData));
   }
   /* USER CODE END 3 */
 }

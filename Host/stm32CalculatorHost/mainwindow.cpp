@@ -16,12 +16,16 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), m_ui(new Ui::MainW
     // 创建一个新的 QWidget，用作主窗口中央的自定义区域
     m_centralWidget = new QWidget(this);
 
-    // 创建显示区域，这里假设您已经有一个显示区域的对象 displayWidget
+    // ==== displayWidget ====
+    // 创建显示区域，这里假设您已经有一个显示区域的对象
     // 如果没有，您可以根据需要创建一个 QLabel 或 QTextEdit 作为显示区域
-    m_displayWidget =new QLineEdit;
+    m_displayWidget =new QTextEdit;
+    QFont font;
+    font.setPointSize(11);
     // 设置显示区域的布局和内容
     //设置只读
 
+    // ==== keyboardLayout ====
     // 创建键盘区域
     m_keyboardWidget = new QWidget;
     createKeyboardWidget();
@@ -40,9 +44,9 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), m_ui(new Ui::MainW
 
     //打开所有Actions，启用slots
     initActionsConnections();
-
+    /*初始化串口发送与接受帧*/
+    initSerialFrame();
     connect(m_serialPort, &QSerialPort::errorOccurred, this, &MainWindow::handleError);
-
     connect(m_serialPort, &QSerialPort::readyRead, this, &MainWindow::readData);
 
     setWindowTitle(tr("STM32 Calculation Demo."));
@@ -59,41 +63,67 @@ void MainWindow::createKeyboardWidget(){
     for (int i = 0; i < NumDigitButtons; ++i)
         digitButtons[i] = createButton(QString::number(i), SLOT(digitClicked()));
 
-    Button *pointButton = createButton(tr("."), SLOT(pointClicked()));
-    Button *changeSignButton = createButton(tr("\302\261"), SLOT(changeSignClicked()));
+    //"+"
+    Button *plusButton = createButton(tr("+"), SLOT(operatorClicked()));
+    //"-"
+    Button *minusButton = createButton(tr("-"), SLOT(operatorClicked()));
+    //"*"
+    Button *timesButton = createButton(tr("\303\227"), SLOT(operatorClicked()));
+    //"/"
+    Button *divisionButton = createButton(tr("\303\267"), SLOT(operatorClicked()));
+    // .
+    Button *pointButton = createButton(tr("."), SLOT(operatorClicked()));
+    // sqrt
+    Button *squareRootButton = createButton(tr("Sqrt"), SLOT(operatorClicked()));
+    // cbrt
+    Button *cubeRootButton = createButton(tr("cbrt"), SLOT(operatorClicked()));
+    // 平方squre
+    Button *squreButton = createButton(tr("x^2"), SLOT(operatorClicked()));
+    // 平方squre
+    Button *cubeButton = createButton(tr("x^3"), SLOT(operatorClicked()));
+    // =
+    Button *equalButton = createButton(tr("="), SLOT(operatorClicked()));
+    // delete (backspace)
+    Button *backspaceButton = createButton(tr("Backspace"), SLOT(operatorClicked()));
+    // clear
+    Button *clearButton = createButton(tr("Clear"), SLOT(operatorClicked()));
+    //符号变量x,y
+    Button *variableXButton = createButton(tr("X"), SLOT(operatorClicked()));
+    Button *variableYButton = createButton(tr("Y"), SLOT(operatorClicked()));
+    //解方程 新起一行
+    Button *newLineButton = createButton(tr("\\n"), SLOT(operatorClicked()));
+    //解方程按键SOLVE
+    Button *solveButton = createButton(tr("sov"), SLOT(operatorClicked()));
 
-    Button *backspaceButton = createButton(tr("Backspace"), SLOT(backspaceClicked()));
-    Button *clearButton = createButton(tr("Clear"), SLOT(clear()));
+    //Button *changeSignButton = createButton(tr("\302\261"), SLOT(changeSignClicked()));
     Button *clearAllButton = createButton(tr("Clear All"), SLOT(clearAll()));
 
-    Button *clearMemoryButton = createButton(tr("MC"), SLOT(clearMemory()));
-    Button *readMemoryButton = createButton(tr("MR"), SLOT(readMemory()));
-    Button *setMemoryButton = createButton(tr("MS"), SLOT(setMemory()));
-    Button *addToMemoryButton = createButton(tr("M+"), SLOT(addToMemory()));
+    //Button *clearMemoryButton = createButton(tr("MC"), SLOT(clearMemory()));
+    //Button *readMemoryButton = createButton(tr("MR"), SLOT(readMemory()));
+    //Button *setMemoryButton = createButton(tr("MS"), SLOT(setMemory()));
+    //Button *addToMemoryButton = createButton(tr("M+"), SLOT(addToMemory()));
 
-    Button *divisionButton = createButton(tr("\303\267"), SLOT(multiplicativeOperatorClicked()));
-    Button *timesButton = createButton(tr("\303\227"), SLOT(multiplicativeOperatorClicked()));
-    Button *minusButton = createButton(tr("-"), SLOT(additiveOperatorClicked()));
-    Button *plusButton = createButton(tr("+"), SLOT(additiveOperatorClicked()));
+    //Button *powerButton = createButton(tr("x\302\262"), SLOT(unaryOperatorClicked()));
+    //Button *reciprocalButton = createButton(tr("1/x"), SLOT(unaryOperatorClicked()));
 
-    Button *squareRootButton = createButton(tr("Sqrt"), SLOT(unaryOperatorClicked()));
-    Button *powerButton = createButton(tr("x\302\262"), SLOT(unaryOperatorClicked()));
-    Button *reciprocalButton = createButton(tr("1/x"), SLOT(unaryOperatorClicked()));
-    Button *equalButton = createButton(tr("="), SLOT(equalClicked()));
     //! [4]
 
     //! [5]
     QGridLayout *mainLayout = new QGridLayout;
     //! [5] //! [6]
-    mainLayout->setSizeConstraint(QLayout::SetFixedSize);
+    mainLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
     mainLayout->addWidget(backspaceButton, 1, 0, 1, 2);
     mainLayout->addWidget(clearButton, 1, 2, 1, 2);
     mainLayout->addWidget(clearAllButton, 1, 4, 1, 2);
 
-    mainLayout->addWidget(clearMemoryButton, 2, 0);
-    mainLayout->addWidget(readMemoryButton, 3, 0);
-    mainLayout->addWidget(setMemoryButton, 4, 0);
-    mainLayout->addWidget(addToMemoryButton, 5, 0);
+    //mainLayout->addWidget(clearMemoryButton, 2, 0);
+    //mainLayout->addWidget(readMemoryButton, 3, 0);
+    //mainLayout->addWidget(setMemoryButton, 4, 0);
+    //mainLayout->addWidget(addToMemoryButton, 5, 0);
+    mainLayout->addWidget(squareRootButton, 2, 0);
+    mainLayout->addWidget(cubeRootButton, 3, 0);
+    mainLayout->addWidget(squreButton, 4, 0);
+    mainLayout->addWidget(cubeButton, 5, 0);
 
     for (int i = 1; i < NumDigitButtons; ++i) {
         int row = ((9 - i) / 3) + 2;
@@ -103,17 +133,18 @@ void MainWindow::createKeyboardWidget(){
 
     mainLayout->addWidget(digitButtons[0], 5, 1);
     mainLayout->addWidget(pointButton, 5, 2);
-    mainLayout->addWidget(changeSignButton, 5, 3);
+    mainLayout->addWidget(equalButton, 5, 3);
+
 
     mainLayout->addWidget(divisionButton, 2, 4);
     mainLayout->addWidget(timesButton, 3, 4);
     mainLayout->addWidget(minusButton, 4, 4);
-    mainLayout->addWidget(plusButton, 5, 4);
 
-    mainLayout->addWidget(squareRootButton, 2, 5);
-    mainLayout->addWidget(powerButton, 3, 5);
-    mainLayout->addWidget(reciprocalButton, 4, 5);
-    mainLayout->addWidget(equalButton, 5, 5);
+    mainLayout->addWidget(plusButton, 5, 4);
+    mainLayout->addWidget(newLineButton, 2, 5);
+    mainLayout->addWidget(variableXButton, 3, 5);
+    mainLayout->addWidget(variableYButton, 4, 5);
+    mainLayout->addWidget(solveButton, 5, 5);
     m_keyboardWidget->setLayout(mainLayout);
 }
 
@@ -165,8 +196,20 @@ void MainWindow::writeData(const QByteArray &data)
 //! [7]
 void MainWindow::readData()
 {
-    const QByteArray data = m_serialPort->readAll();
+    QByteArray data = m_serialPort->readAll();
     //m_console->putData(data);
+    //数据帧解析函数，解析来自stm32的frame，同时更新相应的值
+    //需要补充，如果data.size()过大，应该舍弃多少接受的数据.
+    for(int i=0; i<data.size(); ++i) {
+        uint8_t byte = (uint8_t)data[i];
+        hostGetOneByte(byte);
+    }
+    //m_displayWidget->insertPlainText(data);
+    //m_displayWidget->clear();
+    m_displayWidget->clear();
+    m_displayWidget->insertPlainText(QString(m_frameData.equationStr));
+    m_displayWidget->insertPlainText("\n");
+    m_displayWidget->insertPlainText(QString(m_frameData.answerStr));
 }
 //! [7]
 
@@ -211,13 +254,84 @@ Button *MainWindow::createButton(const QString &text, const char *member)
 }
 
 /*
- * 下面是按键功能函数
+ * 下面是数字按键功能函数，按下后通过串口发送
  */
 void MainWindow::digitClicked(){
     Button *clickedButton = qobject_cast<Button *>(sender());
     int digitValue = clickedButton->text().toInt();
     //digitValue = (int)0~9
+
+    m_serialHost2StmFrame.serialButtonType=digitValue+1;
+    m_serialHost2StmFrame.serialHostPressCnt++;
+    QByteArray data((char*)&m_serialHost2StmFrame, sizeof(m_serialHost2StmFrame));
+    //测试用
+    //char c = '0' + digitValue; // 转换为'0'-'9'的ASCII字符
+    //QByteArray data((char*)&c,sizeof(c));
+    writeData(data);
 }
 
+/*
+ * 操作符按键SLOT,按下后通过串口发送
+*/
+void MainWindow::operatorClicked(){
+    Button *clickedButton = qobject_cast<Button *>(sender());
+    QString clickedOperator = clickedButton->text();
+    uint8_t pressedButtonValue = BUT_NO_PRESS;
+    if (clickedOperator == tr("+")){
+        pressedButtonValue=BUT_ADD;
+    }
+    else if(clickedOperator==tr("-")){
+        pressedButtonValue=BUT_MINUS;
+    }
+    else if(clickedOperator==tr("\303\227")){
+        //"*"
+        pressedButtonValue=BUT_MUL;
+    }
+    else if(clickedOperator==tr("\303\267")){
+        // "/"
+        pressedButtonValue=BUT_DIV;
+    }
+    else if(clickedOperator==tr(".")){
+        // dot
+        pressedButtonValue=BUT_DOT;
+    }
+    else if(clickedOperator==tr("Sqrt")){
+        pressedButtonValue=BUT_SQRT;
+    }
+    else if(clickedOperator==tr("cbrt")){
+        pressedButtonValue=BUT_CBRT;
+    }
+    else if(clickedOperator==tr("x^2")){
+        pressedButtonValue=BUT_SQU;
+    }
+    else if(clickedOperator==tr("x^3")){
+        pressedButtonValue=BUT_CUBE;
+    }
+    else if(clickedOperator==tr("=")){
+        pressedButtonValue=BUT_EQU;
+    }
+    else if(clickedOperator==tr("Backspace")){
+        pressedButtonValue=BUT_EQU;
+    }
+    else if(clickedOperator==tr("Clear")){
+        pressedButtonValue=BUT_CLEAR;
+    }
+    else if(clickedOperator==tr("X")){
+        pressedButtonValue=BUT_VARIABLE_X;
+    }
+    else if(clickedOperator==tr("Y")){
+        pressedButtonValue=BUT_VARIABLE_Y;
+    }
+    else if(clickedOperator==tr("\\n")){
+        pressedButtonValue=BUT_EQ_NL;
+    }
+    else if(clickedOperator==tr("sov")){
+        pressedButtonValue=BUT_SOLVE;
+    }
+    m_serialHost2StmFrame.serialButtonType=pressedButtonValue;
+    m_serialHost2StmFrame.serialHostPressCnt++;
+    QByteArray data((char*)&m_serialHost2StmFrame, sizeof(m_serialHost2StmFrame));
+    writeData(data);
+}
 
 

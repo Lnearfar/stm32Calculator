@@ -57,12 +57,13 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+uint8_t rxbuf;//huart1 receive buffer
 /* USER CODE END 0 */
 
 /**
- * @brief  The application entry point.
- * @retval int
- */
+  * @brief  The application entry point.
+  * @retval int
+  */
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -91,13 +92,14 @@ int main(void)
   MX_USART1_UART_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
   lcdBegin();
   InitCalculatorGP();
   initHostButtonFrame();
   openingVideo();
   // lcdFunTime();
-  HAL_UART_Receive_IT(&huart1, &buttonPressedType, 1);
+  HAL_UART_Receive_IT(&huart1, &rxbuf, 1);
   HAL_TIM_Base_Start_IT(&htim2);
 
   /* USER CODE END 2 */
@@ -109,8 +111,15 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    // �????要测按钮状�?�的函数，修改buttonPressedType变量值（变量定义在button.h文件)
+    //Obtain button type, most of time the buttonPressedType is BUT_NO_PRESS
     buttonPressedType = checkButton();
+
+    //debug:
+    if(hostButtonFrame.serialHostPressCnt!=hostButtonCnt){
+      buttonPressedType = hostButtonFrame.serialButtonType;
+      hostButtonCnt = hostButtonFrame.serialHostPressCnt;
+    }
+    //end bebug
 
     if (buttonPressedType != BUT_NO_PRESS)
     {
@@ -118,10 +127,9 @@ int main(void)
       updateEquationString();
       buttonPressedType = BUT_NO_PRESS;
     }
+    //updateCalDisplayMap() draws the string in calData(and other information struct) on DisplayMap[] array, then updateDisplay print displayMap[] on LCD screen
     updateCalDisplayMap();
-    // 将DisplayMap显示出来
     updateDisplay();
-    // HAL_UART_Transmit(&huart1,&buttonPressedType,1,10);
     // 通过串口传给上位机Host
     UART_Transmit_Struct(&huart1, &calData, sizeof(calData));
   }
@@ -129,17 +137,17 @@ int main(void)
 }
 
 /**
- * @brief System Clock Configuration
- * @retval None
- */
+  * @brief System Clock Configuration
+  * @retval None
+  */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
-   * in the RCC_OscInitTypeDef structure.
-   */
+  * in the RCC_OscInitTypeDef structure.
+  */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
@@ -152,8 +160,9 @@ void SystemClock_Config(void)
     Error_Handler();
   }
   /** Initializes the CPU, AHB and APB buses clocks
-   */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
@@ -170,8 +179,9 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   if (huart == &huart1)
   {
-    HAL_UART_Receive_IT(&huart1, &buttonPressedType, 1);
-    HAL_UART_Transmit(&huart1, &buttonPressedType, 1, 10);
+    /*rxbuf == data;*/
+    stm32GetOneByte(rxbuf);
+    HAL_UART_Receive_IT(&huart1, &rxbuf, 1);
   }
 }
 
@@ -192,7 +202,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
       // do nothing calData.cursorState == CURSOR_ST_NOTSHOW
     }
   }
-  // 检测到state标志为1，如果计时器每5ms溢出一次，每溢出一次，time++
+  // �??测到state标志�??1，如果计时器�??5ms溢出�??次，每溢出一次，time++
   if (htim == &htim3)
   {
     if (m_but_state == 1)
@@ -205,9 +215,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 /* USER CODE END 4 */
 
 /**
- * @brief  This function is executed in case of error occurrence.
- * @retval None
- */
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -219,14 +229,14 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef USE_FULL_ASSERT
+#ifdef  USE_FULL_ASSERT
 /**
- * @brief  Reports the name of the source file and the source line number
- *         where the assert_param error has occurred.
- * @param  file: pointer to the source file name
- * @param  line: assert_param error line source number
- * @retval None
- */
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */

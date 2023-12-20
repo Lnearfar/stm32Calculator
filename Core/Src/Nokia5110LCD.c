@@ -30,8 +30,8 @@ LED (backlight) pin should remain on a PWM-capable pin. */
 // PB15: SPI2_MOSI
 GPIO_TypeDef *lcdPort = GPIOB;
 const uint16_t scePin = GPIO_PIN_12;  // SCE - Chip select, pin 3 on LCD.
-const uint16_t rstPin = GPIO_PIN_11;  // RST - Reset, pin 4 on LCD.
-const uint16_t dcPin = GPIO_PIN_10;   // DC - Data/Command, pin 5 on LCD.
+const uint16_t rstPin = GPIO_PIN_8;  // RST - Reset, pin 4 on LCD.
+const uint16_t dcPin = GPIO_PIN_7;   // DC - Data/Command, pin 5 on LCD.
 const uint16_t sdinPin = GPIO_PIN_15; // DN(MOSI) - Serial data, pin 6 on LCD.
 const uint16_t sclkPin = GPIO_PIN_13; // SCLK - Serial clock, pin 7 on LCD.
 const uint16_t blPin = GPIO_PIN_9;    // LED - Backlight LED, pin 8 on LCD.

@@ -54,6 +54,7 @@ typedef enum
 }KEY_ENUM;
 
 extern uint8_t buttonPressedType;
+extern uint8_t hostButtonCnt;
 extern int m_but_state;
 extern int m_but_time;
 

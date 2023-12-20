@@ -31,6 +31,9 @@
         "stdint.h": "c",
         "str2bitmap.h": "c",
         "button.h": "c",
-        "calculatorgp.h": "c"
+        "calculatorgp.h": "c",
+        "string": "c",
+        "xstring": "c",
+        "xutility": "c"
     }
 }

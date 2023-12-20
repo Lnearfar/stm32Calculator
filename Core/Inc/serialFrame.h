@@ -18,6 +18,8 @@ typedef struct{
     uint8_t frameEnd2;
 }st_serialHost2StmFrame;
 
+void stm32GetOneByte(uint8_t data);
+
 extern st_serialHost2StmFrame hostButtonFrame;
 
 #endif

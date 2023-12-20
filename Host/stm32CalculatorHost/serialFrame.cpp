@@ -12,12 +12,13 @@ void initSerialFrame(void){
     m_serialHost2StmFrame.frameEnd2=0xFF;
     m_serialHost2StmFrame.serialHostPressCnt=0;
 }
-
-enum {
+enum
+{
     WAITING_FOR_START,
-    RECEIVED_START,
+    RECEIVING_FRAME_START2,
     RECEIVING_DATA,
-    RECEIVED_END
+    RECEIVING_END1,
+    RECEIVING_END2,
 };
 
 /**
@@ -28,37 +29,81 @@ Struct_Data_Buffer m_frameData;
 uint8_t state = WAITING_FOR_START;
 uint8_t buffer[sizeof(Struct_Data_Buffer)];
 uint8_t index = 0;
+
 void hostGetOneByte(uint8_t data){
-    switch(state) {
-
+    switch (state)
+    {
     case WAITING_FOR_START:
-        if(data == FRAME_START) {
+    {
+        if (data == FRAME_START)
+        {
             index = 0;
-            state = RECEIVED_START;
+            buffer[index++] = data;
+            state = RECEIVING_FRAME_START2;
+            //HAL_UART_Transmit(&huart3, (uint8_t *)msg1, sizeof(msg1), 10);
         }
-        break;
-
-    case RECEIVED_START:
-        state = RECEIVING_DATA;
-        buffer[index++] = data;
-        break;
-
+        // else state = WAITING_FOR_START
+    }
+    break;
+    case RECEIVING_FRAME_START2:
+    {
+        if (data == FRAME_START)
+        {
+            buffer[index++] = data;
+            state = RECEIVING_DATA;
+            //HAL_UART_Transmit(&huart3, (uint8_t *)msg2, sizeof(msg2), 10);
+        }
+        else
+        {
+            state = WAITING_FOR_START;
+            memset(buffer, '\0', sizeof(buffer));
+        }
+    }
+    break;
     case RECEIVING_DATA:
+    {
         buffer[index++] = data;
-        if(index >= sizeof(Struct_Data_Buffer)) {
-            state = RECEIVED_END;
+        //HAL_UART_Transmit(&huart3, (uint8_t *)msg3, sizeof(msg3), 10);
+        if (index >= sizeof(Struct_Data_Buffer) - 2)
+        {
+            state = RECEIVING_END1;
         }
-        break;
-
-    case RECEIVED_END:
-        if(data == FRAME_END) {
-            memcpy(&m_frameData, buffer, sizeof(Struct_Data_Buffer));
+    }
+    break;
+    case RECEIVING_END1:
+    {
+        if (data == FRAME_END)
+        {
+            buffer[index++] = data;
             // process frameData
+            state = RECEIVING_END2;
+            //HAL_UART_Transmit(&huart3, (uint8_t *)msg4, sizeof(msg4), 10);
+        }
+        else
+        {
             state = WAITING_FOR_START;
-        } else {
+            memset(buffer, '\0', sizeof(buffer));
+        }
+    }
+    break;
+    case RECEIVING_END2:
+    {
+        if (data == FRAME_END)
+        {
+            buffer[index] = data;
+            state = WAITING_FOR_START;
+            memcpy(&m_frameData, &buffer, sizeof(buffer));
+            memset(&buffer, '\0', sizeof(buffer));
+            //HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+            //HAL_UART_Transmit(&huart3, (uint8_t *)msg5, sizeof(msg5), 10);
+        }
+        else
+        {
+            memset(&buffer, '\0', sizeof(buffer));
             state = WAITING_FOR_START;
         }
-        break;
+    }
+    break;
     }
 }
 

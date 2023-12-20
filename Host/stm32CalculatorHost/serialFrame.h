@@ -4,14 +4,15 @@
 #include <QByteArray>
 
 #define FRAME_START 0xAA
-#define FRAME_END 0xBB
+#define FRAME_END 0xFF
 
 /**
  * 定义发送给stm32的按键信息数据帧
  * 发送给stm32时应 0xAA,0xAA,按键对应枚举值(uint8_t),按键次数(uint8_t<256),自定义一位控制信号,0xFF,0xFF
  *
  * 接受的时候要解析数据帧
-/* ! 本文件枚举应与Button.h(stm32)的顺序一致!*/
+/* ! 本文件枚举应与Button.h(stm32)的顺序一致!
+*/
 typedef enum
 {
     BUT_NO_PRESS=0,
@@ -73,6 +74,9 @@ void initSerialFrame(void);
  * Struct_Data_Buffer为在stm32里面定义的结构体，如在stm32更新，需要在此处同步更新，同时更新相应的解析函数
 */
 typedef struct{
+    //数据帧定义
+    uint8_t frameStart1;
+    uint8_t frameStart2;
     //equation
     char equationStr[100];
     uint8_t equationStrLength;
@@ -92,6 +96,10 @@ typedef struct{
     uint8_t buttonType;
     //与上位机通信相关的内容
     uint8_t ctrSignal;
+
+    //数据帧尾部
+    uint8_t frameEnd1;
+    uint8_t frameEnd2;
 }Struct_Data_Buffer;
 
 void hostGetOneByte(uint8_t data);

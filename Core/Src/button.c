@@ -3,7 +3,7 @@
  * @brief File brief description
  *
  * Detailed description of the file.
- * 
+ *
  * short-time
  * -----------------
  * |  1  2  3  4  |
@@ -22,40 +22,51 @@
  * @author Jiayi Hu (author@email.com)
  * @version 1.0
  * @date 2023-12-19
+ * @note PA0-3 推挽输出，PA4-7上拉输入；TIM3->psc=7199,arr=49,USART1, 115200baudrate,8bit,noparity,1 stop bit, t and r enable; use TIM3
  *
  * @copyright Copyright (c) 2023 Author Name
  *
  */
+/**
+ * TODO: update checkButton() to merge button information in hostButtonFrame, and return ButtonType;
+ */
+
 #include "button.h"
 /* private variable and definition start */
-
 uint8_t hostButtonType = BUT_NO_PRESS;
 uint8_t hostButtonCnt = 0;
+
+typedef struct Button_GPIO_TypeDef
+{
+  GPIO_TypeDef* GPIOx;
+  uint16_t GPIO_Pin; 
+}Button_GPIO_TypeDef;
+
+Button_GPIO_TypeDef R1 = {GPIOA, GPIO_PIN_0};
+Button_GPIO_TypeDef R2 = {GPIOA, GPIO_PIN_1};
+Button_GPIO_TypeDef R3 = {GPIOA, GPIO_PIN_2}; 
+Button_GPIO_TypeDef R4 = {GPIOA, GPIO_PIN_3};
+
+Button_GPIO_TypeDef C1 = {GPIOA, GPIO_PIN_4};
+Button_GPIO_TypeDef C2 = {GPIOA, GPIO_PIN_5};  
+Button_GPIO_TypeDef C3 = {GPIOA, GPIO_PIN_6};
+Button_GPIO_TypeDef C4 = {GPIOA, GPIO_PIN_7};
+
 // 假设serialFrame.h里面hostButtonFrame是暴露给此文件的，并且认为此次信息是实时的
 // hostButtonFrame.serialButtonType
 // hostButtonFrame.serialButtonCnt
-
 // 初始时没有任何按键按下,button = BUT_NO_PRESS
 uint8_t buttonPressedType = BUT_NO_PRESS;
 int m_but_time;
 int m_but_state = 0;
-
 // 检查按键状态，返回对应字符BUT_xxx
 uint8_t checkButton(void)
 {
-	HAL_Init();					   // HAL 定义
-	SystemClock_Config();		   //
-	MX_GPIO_Init();				   // 初始化GPIO，其中，P0-03推挽输出，P4-P7上拉输入
-	MX_TIM3_Init();				   // 定义时钟源，内部时钟源，向上计数，psc=7199，arr=49，不分频，自动重装载：使能，勾选定时器中断
-	MX_USART1_UART_Init();		   // USART1,异步通信，波特率115200，8位数据长度，无奇偶检验，停止位1，接收和发送都使能
-	HAL_TIM_Base_Start_IT(&htim3); // 开启时钟
 	//
+	HAL_TIM_Base_Start_IT(&htim3); // 开启时钟
 	while (1)
 	{
-
-		/* USER CODE END WHILE */
-
-		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET); // 使第一行置0，其余置1，依次检测第一行的所有列是否为0

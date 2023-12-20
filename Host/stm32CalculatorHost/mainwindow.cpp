@@ -201,8 +201,7 @@ void MainWindow::readData()
     //数据帧解析函数，解析来自stm32的frame，同时更新相应的值
     //需要补充，如果data.size()过大，应该舍弃多少接受的数据.
     for(int i=0; i<data.size(); ++i) {
-        uint8_t byte = (uint8_t)data[i];
-        hostGetOneByte(byte);
+        hostGetOneByte((uint8_t)data[i]);
     }
     //m_displayWidget->insertPlainText(data);
     //m_displayWidget->clear();

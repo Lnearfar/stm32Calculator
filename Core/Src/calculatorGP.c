@@ -58,7 +58,7 @@ void InitCalculatorGP(void)
     calData.answer = 0;
     memset(calData.answerStr, '\0', sizeof(calData.answerStr));
     calData.answerStrLength = 0;
-    calData.answerNeedClear = false;
+    calData.answerNeedClear = 0;
     calData.cursorInEqString = 0;
     calData.cursorScreenX = 0;
     calData.cursorState = CURSOR_ST_1;
@@ -251,7 +251,7 @@ void updateEquationString(void)
         memset(calData.answerStr, 0, sizeof(calData.answerStr));
         sprintf(calData.answerStr, "%.2f", calData.answer);
         calData.answerStrLength = sizeof(calData.answerStr);
-        calData.answerNeedClear = true;
+        calData.answerNeedClear = 1;
         calData.calculationTimes++; //  要告知计算机保存数据
     }
     break;
@@ -264,7 +264,7 @@ void updateEquationString(void)
         calData.answer = 0;
         memset(calData.answerStr, '\0', sizeof(calData.answerStr));
         calData.answerStrLength = 0;
-        calData.answerNeedClear = false;
+        calData.answerNeedClear = 1;
         calData.cursorInEqString = 0;
         calData.cursorScreenX = 0;
         calData.buttonType = BUT_NO_PRESS;
@@ -278,7 +278,7 @@ void updateEquationString(void)
             calData.answer = 0;
             memset(calData.answerStr, '\0', sizeof(calData.answerStr));
             calData.answerStrLength = 0;
-            calData.answerNeedClear = false;
+            calData.answerNeedClear = 0;
         }
         // 左移的时候不在最左边，直接移动cursorScreenX-=6,cursorInEqString--
         if (calData.cursorScreenX != 0)
@@ -309,7 +309,7 @@ void updateEquationString(void)
             calData.answer = 0;
             memset(calData.answerStr, '\0', sizeof(calData.answerStr));
             calData.answerStrLength = 0;
-            calData.answerNeedClear = false;
+            calData.answerNeedClear = 0;
         }
         // 如果光标不在最右边
         if (calData.cursorScreenX != LCD_WIDTH - 1)
@@ -341,7 +341,7 @@ void updateEquationString(void)
             calData.answer = 0;
             memset(calData.answerStr, '\0', sizeof(calData.answerStr));
             calData.answerStrLength = 0;
-            calData.answerNeedClear = false;
+            calData.answerNeedClear = 0;
         }
         if (calData.cursorScreenX == 0)
         {
@@ -751,7 +751,7 @@ void insertCharToEqCursor(char c)
             calData.answer = 0;
             memset(calData.answerStr, '\0', sizeof(calData.answerStr));
             calData.answerStrLength = 0;
-            calData.answerNeedClear = false;
+            calData.answerNeedClear = 0;
         }
         calData.cursorInEqString++;
         calData.cursorScreenX += (calData.cursorScreenX == 0) ? 5 : 6;
@@ -774,7 +774,7 @@ void insertCharToEqCursor(char c)
             calData.answer = 0;
             memset(calData.answerStr, '\0', sizeof(calData.answerStr));
             calData.answerStrLength = 0;
-            calData.answerNeedClear = false;
+            calData.answerNeedClear = 0;
         }
         calData.cursorInEqString++;
         // calData.cursorScreenX;

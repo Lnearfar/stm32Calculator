@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     button.cpp \
+    calcHistory.cpp \
     main.cpp \
     mainwindow.cpp \
     serialFrame.cpp \
@@ -17,6 +18,7 @@ SOURCES += \
 
 HEADERS += \
     button.h \
+    calcHistory.h \
     mainwindow.h \
     serialFrame.h \
     settingsdialog.h

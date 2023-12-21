@@ -24,14 +24,15 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), m_ui(new Ui::MainW
     font.setPointSize(11);
     // 设置显示区域的布局和内容
     //设置只读
+    // ==== displayWidget ====
 
     // ==== keyboardLayout ====
     // 创建键盘区域
     m_keyboardWidget = new QWidget;
     createKeyboardWidget();
-
     // 在 keyboardLayout 中添加您的键盘按钮
     // 使用前面提到的方式创建按钮并添加到布局中
+    // ==== keyboardLayout ====
 
     // 将键盘区域和显示区域添加到 centralWidget 的 QVBoxLayout 中
     QVBoxLayout *mainLayout = new QVBoxLayout;
@@ -41,6 +42,9 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), m_ui(new Ui::MainW
 
     // 设置 centralWidget 为主窗口的中央部件
     setCentralWidget(m_centralWidget);
+
+    // ==== calcHistory Widget ====
+    m_calcHistory = new calcHistory;
 
     //打开所有Actions，启用slots
     initActionsConnections();
@@ -97,23 +101,21 @@ void MainWindow::createKeyboardWidget(){
 
     //Button *changeSignButton = createButton(tr("\302\261"), SLOT(changeSignClicked()));
     Button *clearAllButton = createButton(tr("Clear All"), SLOT(clearAll()));
+    addToHistoryButton = createButton(tr("+H"), SLOT(addToHistoryClicked()));
+    openHistoryButton = createButton(tr("His"), SLOT(openHistoryClicked()));
 
-    //Button *clearMemoryButton = createButton(tr("MC"), SLOT(clearMemory()));
-    //Button *readMemoryButton = createButton(tr("MR"), SLOT(readMemory()));
-    //Button *setMemoryButton = createButton(tr("MS"), SLOT(setMemory()));
-    //Button *addToMemoryButton = createButton(tr("M+"), SLOT(addToMemory()));
-
-    //Button *powerButton = createButton(tr("x\302\262"), SLOT(unaryOperatorClicked()));
-    //Button *reciprocalButton = createButton(tr("1/x"), SLOT(unaryOperatorClicked()));
 
     //! [4]
 
     //! [5]
     QGridLayout *mainLayout = new QGridLayout;
     //! [5] //! [6]
-    mainLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
-    mainLayout->addWidget(backspaceButton, 1, 0, 1, 2);
-    mainLayout->addWidget(clearButton, 1, 2, 1, 2);
+    mainLayout->setSizeConstraint(QLayout::SetFixedSize);
+    mainLayout->addWidget(backspaceButton, 1, 0, 1, 1);
+    mainLayout->addWidget(clearButton, 1, 1, 1, 1);
+    mainLayout->addWidget(addToHistoryButton, 1, 2, 1, 1);
+    mainLayout->addWidget(openHistoryButton, 1, 3, 1, 1);
+
     mainLayout->addWidget(clearAllButton, 1, 4, 1, 2);
 
     //mainLayout->addWidget(clearMemoryButton, 2, 0);
@@ -203,8 +205,6 @@ void MainWindow::readData()
     for(int i=0; i<data.size(); ++i) {
         hostGetOneByte((uint8_t)data[i]);
     }
-    //m_displayWidget->insertPlainText(data);
-    //m_displayWidget->clear();
     m_displayWidget->clear();
     m_displayWidget->insertPlainText(QString(m_frameData.equationStr));
     m_displayWidget->insertPlainText("\n");
@@ -310,7 +310,7 @@ void MainWindow::operatorClicked(){
         pressedButtonValue=BUT_EQU;
     }
     else if(clickedOperator==tr("Backspace")){
-        pressedButtonValue=BUT_EQU;
+        pressedButtonValue=BUT_DEL;
     }
     else if(clickedOperator==tr("Clear")){
         pressedButtonValue=BUT_CLEAR;
@@ -333,4 +333,10 @@ void MainWindow::operatorClicked(){
     writeData(data);
 }
 
-
+void MainWindow::addToHistoryClicked(){
+    m_calcHistory->addContact(QString(m_frameData.equationStr),QString(m_frameData.answerStr));
+}
+void MainWindow::openHistoryClicked(){
+    m_calcHistory->showContact();
+    m_calcHistory->show();
+}

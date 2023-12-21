@@ -55,6 +55,7 @@ typedef enum
     BUT_EQ_NL,
 }KEY_ENUM;
 
+#pragma pack(1)
 typedef struct{
     uint8_t frameStart1;
     uint8_t frameStart2;
@@ -63,6 +64,7 @@ typedef struct{
     uint8_t frameEnd1;
     uint8_t frameEnd2;
 }st_serialHost2StmFrame;
+#pragma pack()
 
 extern st_serialHost2StmFrame m_serialHost2StmFrame;
 
@@ -73,6 +75,7 @@ void initSerialFrame(void);
  * 解析来自stm32的显示屏显示数据帧
  * Struct_Data_Buffer为在stm32里面定义的结构体，如在stm32更新，需要在此处同步更新，同时更新相应的解析函数
 */
+#pragma pack(1)
 typedef struct{
     //数据帧定义
     uint8_t frameStart1;
@@ -86,7 +89,7 @@ typedef struct{
     float answer;
     char answerStr[100];
     uint8_t answerStrLength;
-    bool answerNeedClear;
+    uint8_t answerNeedClear;
     uint8_t calculationTimes;//表示计算过程执行了几次，用于告知上位机要保存数据
     //cursor
     uint8_t cursorInEqString;//表示光标当前值在equationStr中的位置
@@ -101,6 +104,7 @@ typedef struct{
     uint8_t frameEnd1;
     uint8_t frameEnd2;
 }Struct_Data_Buffer;
+#pragma pack()
 
 void hostGetOneByte(uint8_t data);
 extern Struct_Data_Buffer m_frameData;

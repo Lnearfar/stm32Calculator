@@ -9,6 +9,7 @@
 #include <QtWidgets>
 #include "button.h"
 #include "serialFrame.h"
+#include "calcHistory.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -48,21 +49,8 @@ private slots:
     //按键功能 在mainwindow.cpp里面实现为，通过串口发送对应的操作码
     void digitClicked();
     void operatorClicked();
-
-    //void additiveOperatorClicked();
-    //void multiplicativeOperatorClicked();
-    //void equalClicked();
-    //void pointClicked();
-
-    //void backspaceClicked();
-    //void clear();
-    /*void changeSignClicked();
-    void unaryOperatorClicked();
-    void clearAll();
-    void clearMemory();
-    void readMemory();
-    void setMemory();
-    void addToMemory();*/
+    void addToHistoryClicked();
+    void openHistoryClicked();
 
     void createKeyboardWidget();
 
@@ -83,11 +71,14 @@ private:
     QWidget *m_keyboardWidget;
     QTextEdit *m_displayWidget;
 
+    calcHistory *m_calcHistory;
     //Button相关
     Button *createButton(const QString &text, const char *member);
     // 其他私有变量和方法
     enum { NumDigitButtons = 10 };
     Button *digitButtons[NumDigitButtons];
+    Button *addToHistoryButton;
+    Button *openHistoryButton;
 
     void setupSerialPort(); // 设置串口通信参数
     void sendDataToSTM32(const QString &data); // 向 STM32 发送数据

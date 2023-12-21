@@ -113,7 +113,6 @@ int main(void)
     /* USER CODE BEGIN 3 */
     //Obtain button type, most of time the buttonPressedType is BUT_NO_PRESS
     buttonPressedType = checkButton();
-
     //debug:
     if(hostButtonFrame.serialHostPressCnt!=hostButtonCnt){
       buttonPressedType = hostButtonFrame.serialButtonType;

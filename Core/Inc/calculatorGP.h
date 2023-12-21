@@ -4,7 +4,6 @@
 #include "Nokia5110LCD.h"
 #include "button.h"
 #include "tinyexpr.h"
-#include <stdbool.h>
 #include <string.h>
 
 typedef enum
@@ -14,6 +13,7 @@ typedef enum
     CURSOR_ST_NOTSHOW
 }enum_cursor_state;
 
+#pragma pack(1)
 typedef struct{
     //数据帧定义
     uint8_t frameStart1;
@@ -27,7 +27,7 @@ typedef struct{
     float answer;
     char answerStr[100];
     uint8_t answerStrLength;
-    bool answerNeedClear;
+    uint8_t answerNeedClear;
     uint8_t calculationTimes;//表示计算过程执行了几次，用于告知上位机要保存数据
     //cursor
     uint8_t cursorInEqString;//表示光标当前值在equationStr中的位置
@@ -42,6 +42,7 @@ typedef struct{
     uint8_t frameEnd1;
     uint8_t frameEnd2;
 }Struct_Data_Buffer;
+#pragma pack()
 
 extern Struct_Data_Buffer calData;
 

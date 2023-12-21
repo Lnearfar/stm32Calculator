@@ -196,6 +196,7 @@ Makefile: ..\stm32CalculatorHost\stm32CalculatorHost.pro E:\Qt\Qt6\6.2.4\msvc201
 		E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\features\qt_config.prf \
 		E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\win32-msvc\qmake.conf \
 		E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\features\exclusive_builds.prf \
 		E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\common\msvc-version.conf \
 		E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\features\toolchain.prf \
@@ -227,7 +228,6 @@ Makefile: ..\stm32CalculatorHost\stm32CalculatorHost.pro E:\Qt\Qt6\6.2.4\msvc201
 		E:\Qt\Qt6\6.2.4\msvc2019_64\lib\Qt6SerialPort.prl \
 		E:\Qt\Qt6\6.2.4\msvc2019_64\lib\Qt6Core.prl \
 		E:\Qt\Qt6\6.2.4\msvc2019_64\lib\Qt6EntryPoint.prl \
-		.qmake.stash \
 		E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\features\build_pass.prf \
 		..\stm32CalculatorHost\images\menuBarIcon.qrc \
 		E:\Qt\Qt6\6.2.4\msvc2019_64\lib\Qt6Widgetsd.prl \
@@ -348,6 +348,7 @@ E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\features\qt_functions.prf:
 E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\features\qt_config.prf:
 E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\win32-msvc\qmake.conf:
 E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\features\spec_post.prf:
+.qmake.stash:
 E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\features\exclusive_builds.prf:
 E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\common\msvc-version.conf:
 E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\features\toolchain.prf:
@@ -379,7 +380,6 @@ E:\Qt\Qt6\6.2.4\msvc2019_64\lib\Qt6Gui.prl:
 E:\Qt\Qt6\6.2.4\msvc2019_64\lib\Qt6SerialPort.prl:
 E:\Qt\Qt6\6.2.4\msvc2019_64\lib\Qt6Core.prl:
 E:\Qt\Qt6\6.2.4\msvc2019_64\lib\Qt6EntryPoint.prl:
-.qmake.stash:
 E:\Qt\Qt6\6.2.4\msvc2019_64\mkspecs\features\build_pass.prf:
 ..\stm32CalculatorHost\images\menuBarIcon.qrc:
 E:\Qt\Qt6\6.2.4\msvc2019_64\lib\Qt6Widgetsd.prl:

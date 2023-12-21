@@ -9,6 +9,7 @@ void UART_Transmit_Struct(UART_HandleTypeDef *huart, void *data, uint16_t size);
 /**
  * Host发过来的数据帧格式
 */
+#pragma pack(1)
 typedef struct{
     uint8_t frameStart1;
     uint8_t frameStart2;
@@ -17,6 +18,7 @@ typedef struct{
     uint8_t frameEnd1;
     uint8_t frameEnd2;
 }st_serialHost2StmFrame;
+#pragma pack()
 
 void stm32GetOneByte(uint8_t data);
 

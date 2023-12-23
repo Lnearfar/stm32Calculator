@@ -201,6 +201,8 @@ static double divide(double a, double b) { return a / b; }
 static double negate(double a) { return -a; }
 static double comma(double a, double b) { (void)a; return b; }
 
+
+//自定义函数部分
 //字符串替换函数，将特殊符号替换成指定字符串
 void replace_str(char* str, const char* old_str, const char* new_str)
 {
@@ -218,6 +220,230 @@ void replace_str(char* str, const char* old_str, const char* new_str)
 
     }
 }
+void equation_x(char* str, char* ans) //一元方程求解 str为方程式字符串 ans为计算结果字符串
+{
+    int pos_x1, pos_x2, len_x;
+    int i_x = 0;
+    int j_x = 0;
+    strcpy(ans, "x=");
+    //printf("The equation is %s\n", str);
+    char a_x[10], b_x[10], c_x[100];
+    char a1_x[] = "/(";
+    char b1_x[] = "-(";
+    char b2_x[] = "))";
+    char xstr_x[10];
+    len_x = strlen(str);
+    for (i_x = 0; i_x < len_x; i_x++)
+    {
+        if (str[i_x] == 'x')
+            pos_x1 = i_x;
+        else if (str[i_x] == '=')
+            pos_x2 = i_x;
+    }
+    for (i_x = 0; i_x < pos_x1; i_x++)
+    {
+        a_x[i_x] = str[i_x];
+    }
+    a_x[i_x] = ')';
+    i_x++;
+    a_x[i_x] = '\0';
+    for (; i_x < pos_x2; i_x++)
+    {
+        b_x[j_x] = str[i_x];
+        j_x++;
+    }
+    b_x[j_x] = '\0';
+    i_x++;
+    j_x = 1;
+    c_x[0] = '(';
+    for (; i_x < len_x; i_x++)
+    {
+        c_x[j_x] = str[i_x];
+        j_x++;
+    }
+    c_x[j_x] = '\0';
+    strcat(b1_x, b_x);
+    strcat(b1_x, b2_x);
+    strcat(a1_x, a_x);
+    strcat(b1_x, a1_x);
+    strcat(c_x, b1_x);
+    //printf("%s\n", c);
+    //printf("%s %s %s", a, b,c);
+    //printf("%d %d", pos1, pos2);
+    double r = te_interp(c_x, 0);
+    //printf("The changed expression:\n\t%s\nevaluates to:\n\t%f\n", c, r);
+    r = ((float)((int)((r + 0.005) * 100))) / 100; // 把运算结果保留小数点后两位
+    sprintf(xstr_x, "%.2f", r);
+    strcat(ans, xstr_x);
+}
+
+void insert(char s[], char t, int i)
+{
+    char str[100];
+    strncpy(str, s, i);  //将s数组的前i个字符复制到str中
+    str[i] = t;       //将t方到str后面
+    str[i + 1] = '\0';  //结束
+    strcat(str, (s + i)); //将s剩余的字符串连接到str
+    strcpy(s, str);    //将str复制到s中
+}
+
+void equation_xy(char* str, char* ans) //二元方程求解 str为方程式字符串 ans为计算结果字符串
+{
+    int pos1_xy, pos2_xy, pos3_xy, pos4_xy, pos5_xy, len_xy;
+    int i_xy = 0, j_xy = 0;
+    int x_flag = 0, y_flag = 0, deng_flag = 0;
+    strcpy(ans, "x=");
+    len_xy = strlen(str);
+    char a_xy[10], b_xy[10], c_xy[10], d_xy[10], m_xy[10], n_xy[10], ans_x[100], ans_y[100], xstr_xy[10], ystr_xy[10];
+    for (i_xy = 0; i_xy < len_xy; i_xy++)
+    {
+        if (str[i_xy] == 'x')
+        {
+            if (x_flag == 0)
+            {
+                pos1_xy = i_xy; x_flag++;
+            }
+            else if (x_flag == 1)
+                pos3_xy = i_xy;
+        }
+        else if (str[i_xy] == 'y')
+        {
+            if (y_flag == 0)
+            {
+                pos2_xy = i_xy; y_flag++;
+            }
+            else if (y_flag == 1)
+                pos4_xy = i_xy;
+        }
+        else if (str[i_xy] == '#')
+        {
+            pos5_xy = i_xy;
+        }
+
+    }
+
+    //printf("%d %d %d %d", pos1_xy, pos2_xy, pos3_xy, pos4_xy);
+
+    a_xy[0] = '(';
+    j_xy = 1;
+    for (i_xy = 0; i_xy < pos1_xy; i_xy++)
+    {
+        a_xy[j_xy] = str[i_xy];
+        j_xy++;
+    }
+    a_xy[j_xy] = ')';
+    i_xy++;
+    j_xy++;
+    a_xy[j_xy] = '\0';
+    b_xy[0] = '(';
+    j_xy = 1;
+    for (; i_xy < pos2_xy; i_xy++)
+    {
+        b_xy[j_xy] = str[i_xy];
+        j_xy++;
+    }
+    b_xy[j_xy] = ')';
+    i_xy += 2;
+    j_xy++;
+    b_xy[j_xy] = '\0';
+    m_xy[0] = '(';
+    j_xy = 1;
+    for (; i_xy < pos5_xy; i_xy++)
+    {
+        m_xy[j_xy] = str[i_xy];
+        j_xy++;
+    }
+    m_xy[j_xy] = ')';
+    i_xy++;
+    j_xy++;
+    m_xy[j_xy] = '\0';
+    c_xy[0] = '(';
+    j_xy = 1;
+    for (; i_xy < pos3_xy; i_xy++)
+    {
+        c_xy[j_xy] = str[i_xy];
+        j_xy++;
+    }
+    c_xy[j_xy] = ')';
+    i_xy++;
+    j_xy++;
+    c_xy[j_xy] = '\0';
+    d_xy[0] = '(';
+    j_xy = 1;
+    for (; i_xy < pos4_xy; i_xy++)
+    {
+        d_xy[j_xy] = str[i_xy];
+        j_xy++;
+    }
+    d_xy[j_xy] = ')';
+    i_xy += 2;
+    j_xy++;
+    d_xy[j_xy] = '\0';
+    n_xy[0] = '(';
+    j_xy = 1;
+    for (; i_xy < len_xy; i_xy++)
+    {
+        n_xy[j_xy] = str[i_xy];
+        j_xy++;
+    }
+    n_xy[j_xy] = ')';
+    i_xy++;
+    j_xy++;
+    n_xy[j_xy] = '\0';
+    strcpy(ans_x, "(");
+    strcpy(ans_y, "(");
+    //printf("%s %s %s %s %s",a_xy, b_xy, c_xy, d_xy, m_xy, n_xy);
+
+    char part_2[100] = "/(";
+    strcat(part_2, a_xy);
+    insert(part_2, '*', strlen(part_2));
+    strcat(part_2, d_xy);
+    insert(part_2, '-', strlen(part_2));
+    strcat(part_2, b_xy);
+    insert(part_2, '*', strlen(part_2));
+    strcat(part_2, c_xy);
+    insert(part_2, ')', strlen(part_2));
+
+    strcat(ans_x, m_xy);
+    insert(ans_x, '*', strlen(ans_x));
+    strcat(ans_x, d_xy);
+    insert(ans_x, '-', strlen(ans_x));
+    strcat(ans_x, b_xy);
+    insert(ans_x, '*', strlen(ans_x));
+    strcat(ans_x, n_xy);
+    insert(ans_x, ')', strlen(ans_x));
+    strcat(ans_x, part_2);
+
+    strcat(ans_y, n_xy);
+    insert(ans_y, '*', strlen(ans_y));
+    strcat(ans_y, a_xy);
+    insert(ans_y, '-', strlen(ans_y));
+    strcat(ans_y, m_xy);
+    insert(ans_y, '*', strlen(ans_y));
+    strcat(ans_y, c_xy);
+    insert(ans_y, ')', strlen(ans_y));
+    strcat(ans_y, part_2);
+
+    double r_x = te_interp(ans_x, 0);
+    //printf("The changed expression:\n\t%s\nevaluates to:\n\t%f\n", c, r);
+    r_x = ((float)((int)((r_x + 0.005) * 100))) / 100; // 把运算结果保留小数点后两位
+    sprintf(xstr_xy, "%.2f", r_x);
+
+    double r_y = te_interp(ans_y, 0);
+    //printf("The changed expression:\n\t%s\nevaluates to:\n\t%f\n", c, r);
+    r_y = ((float)((int)((r_y + 0.005) * 100))) / 100; // 把运算结果保留小数点后两位
+    sprintf(ystr_xy, "%.2f", r_y);
+
+    strcat(ans, xstr_xy);
+    insert(ans, ';', strlen(ans));
+    char help_str[] = "y=";
+    strcat(ans, help_str);
+    strcat(ans, ystr_xy);
+
+}
+    //自定义函数部分结束
+
+
 
 void next_token(state* s) {
     s->type = TOK_NULL;

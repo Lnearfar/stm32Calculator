@@ -59,6 +59,12 @@ extern "C" {
     void te_free(te_expr* n);
 
     void replace_str(char* str, const char* old_str, const char* new_str);
+
+    void equation_x(char* str, char* ans);
+
+    void insert(char s[], char t, int i);
+
+    void equation_xy(char* str, char* ans);
 #ifdef __cplusplus
 }
 #endif

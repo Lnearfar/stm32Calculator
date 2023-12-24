@@ -1,6 +1,6 @@
 #include "menu.h"
 
-#define FIRSTLINE 39
+#define FIRSTLINE_Y 39
 
 /**
  * showCalScreen()
@@ -10,7 +10,7 @@ void showCalScreen()
 {
     char mode[] = "mode1";
     clearDisplay(WHITE);
-    setStr("mode", 59, 39, BLACK);
+    setStr(mode, 59, 39, BLACK);
     calData.cursorState = CURSOR_ST_1;
     updateDisplay();
 }
@@ -22,7 +22,7 @@ void showSolvXScreen()
 {
     char mode[] = "mode2";
     clearDisplay(WHITE);
-    setStr("mode", 59, 39, BLACK);
+    setStr(mode, 59, 39, BLACK);
     calData.cursorState = CURSOR_ST_1;
     updateDisplay();
 }
@@ -34,7 +34,7 @@ void showSolvXYScreen()
 {
     char mode[] = "mode3";
     clearDisplay(WHITE);
-    setStr("mode", 59, 39, BLACK);
+    setStr(mode, 59, 39, BLACK);
     calData.cursorState = CURSOR_ST_1;
     updateDisplay();
 }
@@ -46,10 +46,10 @@ void showMenu()
     char mode1[] = "1.CALCULATION";
     char mode2[] = "2.SOLVE F(X)";
     char mode3[] = "3.SOLVE F(X,Y)";
-    setStr(MENU, 29, FIRSTLINE, BLACK);
-    setStr(mode1, 1, FIRSTLINE - 3 - 9, BLACK);
-    setStr(mode2, 1, FIRSTLINE - 3 - 9 * 2, BLACK);
-    setStr(mode3, 1, FIRSTLINE - 3 - 9 * 3, BLACK);
+    setStr(MENU, 29, FIRSTLINE_Y, BLACK);
+    setStr(mode1, 1, FIRSTLINE_Y - 3 - 9, BLACK);
+    setStr(mode2, 1, FIRSTLINE_Y - 3 - 9 * 2, BLACK);
+    setStr(mode3, 1, FIRSTLINE_Y - 3 - 9 * 3, BLACK);
     calData.cursorState = CURSOR_ST_NOTSHOW;
     updateDisplay();
 }

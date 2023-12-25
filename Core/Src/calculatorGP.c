@@ -396,7 +396,15 @@ void updateEquationString(void)
                 calData.equationStr[i - 1] = calData.equationStr[i];
             }
             calData.equationStr[calData.equationStrLength - 1] = '\0';
-            calData.cursorScreenX -= (calData.cursorScreenX == 5) ? 5 : 6;
+            if (calData.cursorScreenX == 83  && calData.equationStrLength > 14)
+            {
+                calData.eqSTptr--;  
+            }
+            else 
+            {
+                calData.cursorScreenX -= (calData.cursorScreenX == 5) ? 5 : 6;
+            }
+            calData.eqEDptr--;
             calData.cursorInEqString--;
             calData.equationStrLength--;
         }

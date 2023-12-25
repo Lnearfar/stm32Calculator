@@ -3,10 +3,9 @@
 
 #include "Nokia5110LCD.h"
 
-
-void showCalScreen();
-void showSolvXScreen();
-void showSolvXYScreen();
-void showMenu();
+void showCalScreen(void);
+void showSolvXScreen(void);
+void showSolvXYScreen(void);
+void showMenu(void);
 
 #endif

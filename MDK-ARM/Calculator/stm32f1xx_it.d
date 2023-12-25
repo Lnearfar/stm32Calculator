@@ -42,6 +42,6 @@ calculator\stm32f1xx_it.o: ../Core/Inc/usart.h
 calculator\stm32f1xx_it.o: ../Core/Inc/gpio.h
 calculator\stm32f1xx_it.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 calculator\stm32f1xx_it.o: ../Core/Inc/tinyexpr.h
-calculator\stm32f1xx_it.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 calculator\stm32f1xx_it.o: ../Core/Inc/serialFrame.h
+calculator\stm32f1xx_it.o: ../Core/Inc/menu.h
 calculator\stm32f1xx_it.o: ../Core/Inc/stm32f1xx_it.h

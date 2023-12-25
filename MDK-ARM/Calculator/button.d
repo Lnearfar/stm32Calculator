@@ -40,8 +40,8 @@ calculator\button.o: ../Core/Inc/main.h
 calculator\button.o: ../Core/Inc/calculatorGP.h
 calculator\button.o: ../Core/Inc/button.h
 calculator\button.o: ../Core/Inc/tinyexpr.h
-calculator\button.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 calculator\button.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 calculator\button.o: ../Core/Inc/serialFrame.h
 calculator\button.o: ../Core/Inc/usart.h
+calculator\button.o: ../Core/Inc/menu.h
 calculator\button.o: ../Core/Inc/gpio.h

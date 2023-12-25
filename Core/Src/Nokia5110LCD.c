@@ -342,6 +342,7 @@ void setCircle(int x0, int y0, int radius, uint8_t bw, int lineThickness)
 // This function will draw a char (defined in the ASCII table
 // near the beginning of this sketch) at a defined x and y).
 // The color can be either black (1) or white (0).
+// Left up corner is (0,0)
 void setChar(char character, int x, int y, uint8_t bw)
 {
   uint8_t column;             // temp byte to store character's column bitmap

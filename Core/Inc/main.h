@@ -36,6 +36,8 @@ extern "C" {
 #include"calculatorGP.h"
 #include "button.h"
 #include "serialFrame.h"
+#include "main.h"
+#include "menu.h"
 
 /* USER CODE END Includes */
 

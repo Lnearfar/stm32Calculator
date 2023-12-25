@@ -43,5 +43,5 @@ calculator\spi.o: ../Core/Inc/usart.h
 calculator\spi.o: ../Core/Inc/gpio.h
 calculator\spi.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 calculator\spi.o: ../Core/Inc/tinyexpr.h
-calculator\spi.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 calculator\spi.o: ../Core/Inc/serialFrame.h
+calculator\spi.o: ../Core/Inc/menu.h

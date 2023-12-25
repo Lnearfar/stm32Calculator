@@ -21,6 +21,7 @@ typedef struct{
 #pragma pack()
 
 void stm32GetOneByte(uint8_t data);
+void initHostButtonFrame(void);
 
 extern st_serialHost2StmFrame hostButtonFrame;
 

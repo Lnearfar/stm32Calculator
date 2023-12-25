@@ -44,5 +44,5 @@ calculator\serialframe.o: ../Core/Inc/usart.h
 calculator\serialframe.o: ../Core/Inc/gpio.h
 calculator\serialframe.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 calculator\serialframe.o: ../Core/Inc/tinyexpr.h
-calculator\serialframe.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 calculator\serialframe.o: ../Core/Inc/serialFrame.h
+calculator\serialframe.o: ../Core/Inc/menu.h

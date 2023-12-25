@@ -43,5 +43,5 @@ calculator\nokia5110lcd.o: ../Core/Inc/usart.h
 calculator\nokia5110lcd.o: ../Core/Inc/gpio.h
 calculator\nokia5110lcd.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 calculator\nokia5110lcd.o: ../Core/Inc/tinyexpr.h
-calculator\nokia5110lcd.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 calculator\nokia5110lcd.o: ../Core/Inc/serialFrame.h
+calculator\nokia5110lcd.o: ../Core/Inc/menu.h

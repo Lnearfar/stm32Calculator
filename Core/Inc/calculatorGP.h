@@ -13,6 +13,13 @@ typedef enum
     CURSOR_ST_NOTSHOW
 }enum_cursor_state;
 
+typedef enum{
+    DISPMODE_MENU,
+    DISPMODE_CAL,
+    DISPMODE_SOLVEX,
+    DISPMODE_SOLVEXY,
+}enum_dispmode;
+
 #pragma pack(1)
 typedef struct{
     //数据帧定义
@@ -45,11 +52,13 @@ typedef struct{
 #pragma pack()
 
 extern Struct_Data_Buffer calData;
+extern uint8_t dispMode;
 
 char but2char(uint8_t button_type);
 void InitCalculatorGP(void);
 void updateButtonState(uint8_t button_type);
 void updateEquationString(void);
+
 void updateCalDisplayMap(void);
 void openingVideo(void);
 void insertCharToEqCursor(char c);

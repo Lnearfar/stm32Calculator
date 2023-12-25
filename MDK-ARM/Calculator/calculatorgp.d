@@ -44,5 +44,5 @@ calculator\calculatorgp.o: ../Core/Inc/usart.h
 calculator\calculatorgp.o: ../Core/Inc/gpio.h
 calculator\calculatorgp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 calculator\calculatorgp.o: ../Core/Inc/serialFrame.h
+calculator\calculatorgp.o: ../Core/Inc/menu.h
 calculator\calculatorgp.o: ../Core/Inc/tinyexpr.h
-calculator\calculatorgp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

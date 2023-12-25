@@ -26,39 +26,13 @@ Project File Date:  12/25/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\Keil_v5\ARM\ARMCC\Bin'
-Rebuild target 'Calculator'
+Build target 'Calculator'
 assembling startup_stm32f103xb.s...
-compiling tinyexpr.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-..\Core\Src\tinyexpr.c(294): warning:  #177-D: variable "deng_flag"  was declared but never referenced
-      int x_flag = 0, y_flag = 0, deng_flag = 0;
-..\Core\Src\tinyexpr.c: 2 warnings, 0 errors
-compiling main.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-../Core/Src/main.c(179): warning:  #111-D: statement is unreachable
-    UART_Transmit_Struct(&huart1, &calData, sizeof(calData));
-../Core/Src/main.c: 3 warnings, 0 errors
 compiling Nokia5110LCDbitFig.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Core\Src\Nokia5110LCDbitFig.c: 2 warnings, 0 errors
-compiling button.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Core\Src\button.c: 2 warnings, 0 errors
+compiling serialFrame.c...
+compiling menu.c...
+compiling Nokia5110LCD.c...
 compiling calculatorGP.c...
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
 ..\Core\Src\calculatorGP.c(44): warning:  #520-D: initialization with "{...}" expected for aggregate object
   char butValString[7] = 0;
 ..\Core\Src\calculatorGP.c(184): warning:  #111-D: statement is unreachable
@@ -107,85 +81,35 @@ compiling calculatorGP.c...
           break;
 ..\Core\Src\calculatorGP.c(275): warning:  #223-D: function "sprintf" declared implicitly
               sprintf(calData.answerStr, "%.2f", calData.answer);
-..\Core\Src\calculatorGP.c: 26 warnings, 0 errors
-compiling serialFrame.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Core\Src\serialFrame.c: 2 warnings, 0 errors
-compiling Nokia5110LCD.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Core\Src\Nokia5110LCD.c: 2 warnings, 0 errors
+..\Core\Src\calculatorGP.c: 24 warnings, 0 errors
+compiling button.c...
+compiling main.c...
 compiling gpio.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-../Core/Src/gpio.c: 2 warnings, 0 errors
 compiling stm32f1xx_hal_gpio_ex.c...
 compiling spi.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-../Core/Src/spi.c: 2 warnings, 0 errors
-compiling stm32f1xx_it.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-../Core/Src/stm32f1xx_it.c: 2 warnings, 0 errors
 compiling stm32f1xx_hal_msp.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-../Core/Src/stm32f1xx_hal_msp.c: 2 warnings, 0 errors
-compiling tim.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-../Core/Src/tim.c: 2 warnings, 0 errors
-compiling menu.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Core\Src\menu.c(55): warning:  #1-D: last line of file ends without a newline
-  }
-..\Core\Src\menu.c: 4 warnings, 0 errors
 compiling usart.c...
-../Core/Inc/tinyexpr.h(72): warning:  #14-D: extra text after expected end of preprocessing directive
-  #endif /*TINYEXPR_H*/#pragma once
-../Core/Inc/menu.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-../Core/Src/usart.c: 2 warnings, 0 errors
-compiling stm32f1xx_hal_cortex.c...
+compiling tim.c...
+compiling stm32f1xx_it.c...
 compiling stm32f1xx_hal_rcc_ex.c...
 compiling stm32f1xx_hal_gpio.c...
 compiling stm32f1xx_hal.c...
-compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_cortex.c...
 compiling stm32f1xx_hal_dma.c...
 compiling stm32f1xx_hal_spi.c...
-compiling stm32f1xx_hal_flash_ex.c...
-compiling stm32f1xx_hal_exti.c...
+compiling stm32f1xx_hal_rcc.c...
 compiling stm32f1xx_hal_flash.c...
+compiling stm32f1xx_hal_exti.c...
 compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_flash_ex.c...
 compiling stm32f1xx_hal_tim_ex.c...
 compiling stm32f1xx_hal_uart.c...
 compiling stm32f1xx_hal_tim.c...
 compiling system_stm32f1xx.c...
 linking...
-Program Size: Code=41340 RO-data=2960 RW-data=56 ZI-data=2736  
+Program Size: Code=41444 RO-data=3264 RW-data=56 ZI-data=17072  
 FromELF: creating hex file...
-"Calculator\Calculator.axf" - 0 Error(s), 55 Warning(s).
+"Calculator\Calculator.axf" - 0 Error(s), 24 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -208,7 +132,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.1.2
-Build Time Elapsed:  00:00:12
+Build Time Elapsed:  00:00:15
 </pre>
 </body>
 </html>

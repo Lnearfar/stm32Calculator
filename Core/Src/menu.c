@@ -53,3 +53,4 @@ void showMenu()
     calData.cursorState = CURSOR_ST_NOTSHOW;
     updateDisplay();
 }
+

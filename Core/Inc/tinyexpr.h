@@ -1,7 +1,5 @@
-#pragma once
 #ifndef TINYEXPR_H
 #define TINYEXPR_H
-
 
 #ifdef __cplusplus
 extern "C" {
@@ -69,4 +67,4 @@ extern "C" {
 }
 #endif
 
-#endif /*TINYEXPR_H*/#pragma once
+#endif /*TINYEXPR_H*/

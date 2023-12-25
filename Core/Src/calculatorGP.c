@@ -169,6 +169,10 @@ void but2str(uint8_t button_type)
     {
         butValString[0] = '=';
     }
+    else if (button_type == BUT_POW)
+    {
+        butValString[0] = '^';
+    }
     else
     {
         butValString[0] = '?';
@@ -396,7 +400,7 @@ void updateEquationString(void)
                 calData.equationStr[i - 1] = calData.equationStr[i];
             }
             calData.equationStr[calData.equationStrLength - 1] = '\0';
-            if (calData.cursorScreenX == 83  && calData.equationStrLength > 14)
+           if (calData.cursorScreenX == 83  && calData.equationStrLength > 14)
             {
                 calData.eqSTptr--;  
             }
@@ -434,6 +438,7 @@ void updateEquationString(void)
     case BUT_EQ_NL:
     case BUT_VARIABLE_X:
     case BUT_VARIABLE_Y:
+    case BUT_POW:
     {
         /*在cursorInEqString处插入字符c,然后光标后移*/
         // char c = but2char(calData.buttonType);
